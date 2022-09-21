@@ -4,9 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>domain</module>
-		<module>dao</module>
-        <module>business</module>
+        <module>modules/domain</module>
+		<module>modules/dao</module>
+        <module>modules/business</module>
+        <module>modules/controller</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>

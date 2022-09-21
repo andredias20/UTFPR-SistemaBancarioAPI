@@ -1,11 +1,19 @@
 package br.edu.utfpr.td.tsi.sistema.bancario.domain.credit.card;
 
+import br.edu.utfpr.td.tsi.sistema.bancario.domain.client.Client;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
+@Entity
+@Table(name = "credit_card")
 public class CreditCard implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @OneToOne(targetEntity = Client.class)
     private Integer clientID;
     private String cardHolder;
     private Long cardNumber;
@@ -19,6 +27,10 @@ public class CreditCard implements Serializable {
         this.cardNumber = cardNumber;
         this.validThru = validThru;
         this.securityCode = securityCode;
+    }
+
+    public CreditCard() {
+
     }
 
     public Integer getId() {
