@@ -1,7 +1,5 @@
 package br.edu.utfpr.td.tsi.sistema.bancario.domain.bank.account;
 
-import br.edu.utfpr.td.tsi.sistema.bancario.domain.client.Client;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -13,9 +11,9 @@ public class Transaction implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @ManyToOne(targetEntity = Client.class)
-    private Integer clientID;
-    private String otherClientCPF;
+    private String clientCPF;
+
+    private String otherCPF;
 
     private Double value;
     private String msg;
@@ -23,36 +21,19 @@ public class Transaction implements Serializable {
     public Transaction() {
     }
 
-    public Transaction(Integer id, Integer clientID, String otherClientCPF, Double value, String msg) {
+    public Transaction(Integer id, String clientCPF, String otherCPF, Double value, String msg) {
         this.id = id;
-        this.clientID = clientID;
-        this.otherClientCPF = otherClientCPF;
+        this.clientCPF = clientCPF;
+        this.otherCPF = otherCPF;
         this.value = value;
         this.msg = msg;
     }
-
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getClientID() {
-        return clientID;
-    }
-
-    public void setClientID(Integer clientID) {
-        this.clientID = clientID;
-    }
-
-    public String getOtherClientCPF() {
-        return otherClientCPF;
-    }
-
-    public void setOtherClientCPF(String otherClientCPF) {
-        this.otherClientCPF = otherClientCPF;
     }
 
     public Double getValue() {
@@ -69,5 +50,21 @@ public class Transaction implements Serializable {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+    public String getClientCPF() {
+        return clientCPF;
+    }
+
+    public void setClientCPF(String clientCPF) {
+        this.clientCPF = clientCPF;
+    }
+
+    public String getOtherCPF() {
+        return otherCPF;
+    }
+
+    public void setOtherCPF(String otherCPF) {
+        this.otherCPF = otherCPF;
     }
 }
