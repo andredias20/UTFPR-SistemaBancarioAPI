@@ -13,19 +13,19 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="bank" target="18" />
-      <module name="bank.account" target="18" />
-      <module name="bank.client" target="18" />
-      <module name="bank.credit.card" target="18" />
-      <module name="bank.loan" target="18" />
+      <module name="bank" target="17" />
+      <module name="bank.account" target="17" />
+      <module name="bank.client" target="17" />
+      <module name="bank.credit.card" target="17" />
+      <module name="bank.loan" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="bank.account" options="-parameters" />
-      <module name="bank.client" options="-parameters" />
-      <module name="bank.credit.card" options="-parameters" />
-      <module name="bank.loan" options="-parameters" />
+      <module name="bank.account" options="" />
+      <module name="bank.client" options="" />
+      <module name="bank.credit.card" options="" />
+      <module name="bank.loan" options="" />
     </option>
   </component>
 </project>

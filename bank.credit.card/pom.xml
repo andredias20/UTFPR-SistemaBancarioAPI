@@ -3,17 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <parent>
-        <artifactId>bank</artifactId>
-        <groupId>br.edu.utfpr.td.tsi</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../bank/pom.xml</relativePath>
-    </parent>
-
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bank.credit.card</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    
+    <groupId>br.edu.utfpr.td.tsi</groupId>
+	<artifactId>bank.credit.card</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

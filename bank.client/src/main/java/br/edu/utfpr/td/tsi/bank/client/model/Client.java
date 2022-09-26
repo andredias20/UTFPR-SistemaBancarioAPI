@@ -5,7 +5,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "client")
+@Table(name = "client", indexes = {
+        @Index(name = "client_id", columnList = "id")
+})
 public class Client implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -24,6 +26,15 @@ public class Client implements Serializable {
 
     public Client() {}
 
+    public Client(String name, String cpf, Date birthDate, String email, String phone, Double salary) {
+        this.id = id;
+        this.name = name;
+        this.cpf = cpf;
+        this.birthDate = birthDate;
+        this.email = email;
+        this.phone = phone;
+        this.salary = salary;
+    }
     public Client(Integer id, String name, String cpf, Date birthDate, String email, String phone, Double salary) {
         this.id = id;
         this.name = name;

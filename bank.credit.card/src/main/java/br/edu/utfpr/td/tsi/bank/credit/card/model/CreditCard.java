@@ -1,7 +1,5 @@
 package br.edu.utfpr.td.tsi.bank.credit.card.model;
 
-
-
 import java.io.Serializable;
 import java.util.Date;
 
