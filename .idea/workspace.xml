@@ -5,94 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33ab844e-bac2-49d5-9f62-6b7842b7b16d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.account/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.account/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.account/bank.account.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/bank.client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exceptions/ClientException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exceptions/ClientExceptionNotFound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exceptions/ClientExceptionRevenue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.credit.card/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.credit.card/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.credit.card/bank.credit.card.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.loan/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.loan/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.loan/bank.loan.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank/bank.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/client/ClientResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__br_edu_utfpr_td_tsi_bank_client_1_0_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_ws_rs_jakarta_ws_rs_api_2_1_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_class_model_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_jakarta_inject_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_core_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_runlevel_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_spring_bridge_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_servlet_2_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_containers_jersey_container_servlet_core_2_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_server_2_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_bean_validation_2_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_entity_filtering_2_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_spring5_2_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_inject_jersey_hk2_2_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_media_jersey_media_json_jackson_2_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_4_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_25_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_analysis_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_util_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jersey_2_7_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_7_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/.project" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/.project" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/dao/ClientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/dao/ClientDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/bank.account.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/bank.account.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/TransactionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/TransactionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/TransactionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/TransactionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.credit.card/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.credit.card/.project" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.credit.card/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.credit.card/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/model/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/model/CreditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.loan/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.loan/.project" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.loan/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.loan/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.client/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/controller/CreditCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/controller/CreditCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.loan/src/main/java/br/edu/utfpr/td/tsi/bank/loan/controller/BankLoanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/src/main/java/br/edu/utfpr/td/tsi/bank/loan/controller/BankLoanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/bank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank/bank.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +54,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -173,9 +100,9 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "advanced.settings",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.run.dashboard.notification": "false",
-    "spring.configuration.checksum": "69e13393731634ba8659eb549f1f8d2f"
+    "spring.configuration.checksum": "1209f3e68082bb2898f6b3b40a4f337a"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -247,7 +174,8 @@
       <updated>1664073078975</updated>
       <workItem from="1664073080003" duration="1160000" />
       <workItem from="1664118095137" duration="10108000" />
-      <workItem from="1664135670896" duration="15543000" />
+      <workItem from="1664135670896" duration="15887000" />
+      <workItem from="1664200846140" duration="13626000" />
     </task>
     <servers />
   </component>

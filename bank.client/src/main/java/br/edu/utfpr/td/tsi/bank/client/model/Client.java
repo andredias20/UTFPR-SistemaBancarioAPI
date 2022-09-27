@@ -5,15 +5,12 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "client", indexes = {
-        @Index(name = "client_id", columnList = "id")
-})
 public class Client implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-    @GeneratedValue( strategy = GenerationType.AUTO)
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
 

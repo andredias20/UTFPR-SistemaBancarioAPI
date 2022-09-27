@@ -8,16 +8,16 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "account_transactions")
 public class Transaction implements Serializable {
 
-	private static final long serialVersionUID = 1L;
 	
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String clientCPF;
     private String otherCPF;
+    private Long destAccountNumber;
+    private Short destAgencyNumber;
     private Double value;
     private String msg;
 
@@ -32,13 +32,18 @@ public class Transaction implements Serializable {
     public Transaction() {
     }
 
-    public Transaction(Integer id, String clientCPF, String otherCPF, Double value, String msg) {
+    public Transaction(Integer id, String clientCPF, String otherCPF, Long destAccountNumber, Short destAgencyNumber, Double value, String msg, Date lastTouched, Date createdAt) {
         this.id = id;
         this.clientCPF = clientCPF;
         this.otherCPF = otherCPF;
+        this.destAccountNumber = destAccountNumber;
+        this.destAgencyNumber = destAgencyNumber;
         this.value = value;
         this.msg = msg;
+        this.lastTouched = lastTouched;
+        this.createdAt = createdAt;
     }
+
     public Integer getId() {
         return id;
     }
@@ -77,5 +82,37 @@ public class Transaction implements Serializable {
 
     public void setOtherCPF(String otherCPF) {
         this.otherCPF = otherCPF;
+    }
+
+    public Long getDestAccountNumber() {
+        return destAccountNumber;
+    }
+
+    public void setDestAccountNumber(Long destAccountNumber) {
+        this.destAccountNumber = destAccountNumber;
+    }
+
+    public Short getDestAgencyNumber() {
+        return destAgencyNumber;
+    }
+
+    public void setDestAgencyNumber(Short destAgencyNumber) {
+        this.destAgencyNumber = destAgencyNumber;
+    }
+
+    public Date getLastTouched() {
+        return lastTouched;
+    }
+
+    public void setLastTouched(Date lastTouched) {
+        this.lastTouched = lastTouched;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 }

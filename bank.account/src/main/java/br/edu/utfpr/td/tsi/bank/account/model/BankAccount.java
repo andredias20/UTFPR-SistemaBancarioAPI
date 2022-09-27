@@ -1,42 +1,25 @@
 package br.edu.utfpr.td.tsi.bank.account.model;
 
-
-
 import java.io.Serializable;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
-import br.edu.utfpr.td.tsi.bank.client.model.Client;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "account")
+@Table(name = "bank_account")
 public class BankAccount implements Serializable {
-
-	private static final long serialVersionUID = 1L;
-
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @OneToOne( targetEntity = Client.class)
-    private Integer clientID;
-
+    private Integer client_id;
     private Short agency;
     private Long accountNumber;
     private Integer key;
 
 
-    public BankAccount() {
-    }
+    public BankAccount() { }
 
-    public BankAccount(Integer id, Integer clientID, Short agency, Long accountNumber, Integer key) {
+    public BankAccount(Integer id, Integer clientId, Short agency, Long accountNumber, Integer key) {
         this.id = id;
-        this.clientID = clientID;
+        this.client_id = clientId;
         this.agency = agency;
         this.accountNumber = accountNumber;
         this.key = key;
@@ -50,12 +33,12 @@ public class BankAccount implements Serializable {
         this.id = id;
     }
 
-    public Integer getClientID() {
-        return clientID;
+    public Integer getClient_id() {
+        return client_id;
     }
 
-    public void setClientID(Integer clientID) {
-        this.clientID = clientID;
+    public void setClient_id(Integer clientId) {
+        this.client_id = clientId;
     }
 
     public Short getAgency() {
