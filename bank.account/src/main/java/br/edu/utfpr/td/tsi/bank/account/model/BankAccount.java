@@ -2,6 +2,7 @@ package br.edu.utfpr.td.tsi.bank.account.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "bank_account")
@@ -9,21 +10,19 @@ public class BankAccount implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer client_id;
-    private Short agency;
+
+    @NotBlank
+    @OneToOne(targetEntity = br.edu.utfpr.td.tsi.bank.client.model.Client.class)
+    private Integer client;
+
+    @NotBlank
+    private Integer agency;
+    @NotBlank
     private Long accountNumber;
+    @NotBlank
     private Integer key;
 
-
     public BankAccount() { }
-
-    public BankAccount(Integer id, Integer clientId, Short agency, Long accountNumber, Integer key) {
-        this.id = id;
-        this.client_id = clientId;
-        this.agency = agency;
-        this.accountNumber = accountNumber;
-        this.key = key;
-    }
 
     public Integer getId() {
         return id;
@@ -33,19 +32,11 @@ public class BankAccount implements Serializable {
         this.id = id;
     }
 
-    public Integer getClient_id() {
-        return client_id;
-    }
-
-    public void setClient_id(Integer clientId) {
-        this.client_id = clientId;
-    }
-
-    public Short getAgency() {
+    public Integer getAgency() {
         return agency;
     }
 
-    public void setAgency(Short agency) {
+    public void setAgency(Integer agency) {
         this.agency = agency;
     }
 
@@ -65,5 +56,10 @@ public class BankAccount implements Serializable {
         this.key = key;
     }
 
-
+    public Integer getClient() {
+        return client;
+    }
+    public void setClient(Integer client_id) {
+        this.client = client_id;
+    }
 }

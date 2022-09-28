@@ -4,6 +4,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -14,10 +16,15 @@ public class Transaction implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Pattern(regexp = "\n{3}.\n{3}.\n{3}-\n{2}", message = "Value don't correspond to default value ###.###.###-##, where # is digits 0-9.")
     private String clientCPF;
+    @Pattern(regexp = "\n{3}.\n{3}.\n{3}-\n{2}", message = "Value don't correspond to default value ###.###.###-##, where # is digits 0-9.")
     private String otherCPF;
+    @NotBlank
     private Long destAccountNumber;
+    @NotBlank
     private Short destAgencyNumber;
+    @NotBlank
     private Double value;
     private String msg;
 
@@ -30,18 +37,6 @@ public class Transaction implements Serializable {
     private Date createdAt;
 
     public Transaction() {
-    }
-
-    public Transaction(Integer id, String clientCPF, String otherCPF, Long destAccountNumber, Short destAgencyNumber, Double value, String msg, Date lastTouched, Date createdAt) {
-        this.id = id;
-        this.clientCPF = clientCPF;
-        this.otherCPF = otherCPF;
-        this.destAccountNumber = destAccountNumber;
-        this.destAgencyNumber = destAgencyNumber;
-        this.value = value;
-        this.msg = msg;
-        this.lastTouched = lastTouched;
-        this.createdAt = createdAt;
     }
 
     public Integer getId() {

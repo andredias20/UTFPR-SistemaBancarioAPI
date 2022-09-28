@@ -17,66 +17,89 @@ public class ClientManager implements ClientController {
     private ClientDAO dao;
 
     @Override
-    public void create(Client item) throws ClientExceptionRevenue {
-        if(item.getSalary() > 1200D){
-            dao.save(item);
-        }else{
-            throw new ClientExceptionRevenue("Client doesn't have enough revenue");
+    public void create(Client item) {
+        try {
+            if (item.getSalary() > 1200D) {
+                dao.save(item);
+            } else {
+                throw new ClientExceptionRevenue("Client doesn't have enough revenue");
+            }
+        }catch(ClientExceptionRevenue e){
+            e.printStackTrace();
         }
     }
 
     @Override
-    public void update(Client item) throws ClientException {
-        if(item.getId() != null){
-            dao.save(item);
-        }else{
-            throw new ClientException("The client ID was not informed");
+    public void update(Client item) {
+        try {
+            if (item.getId() != null) {
+                dao.save(item);
+            } else {
+                throw new ClientException("The client ID was not informed");
+            }
+        }catch (ClientException e){
+            e.printStackTrace();
         }
     }
 
     @Override
-    public void delete(Integer id) throws ClientException {
-        if(id != null){
-            dao.deleteById(id);
-        }else{
-            throw new ClientException("The client ID was not informed");
+    public void delete(Integer id) {
+        try {
+            if (id != null) {
+                dao.deleteById(id);
+            } else {
+                throw new ClientException("The client ID was not informed");
+            }
+        }catch(ClientException e){
+            e.printStackTrace();
         }
     }
 
     @Override
-    public Client searchById(Integer id) throws ClientExceptionNotFound {
+    public Client searchById(Integer id) {
         Client client = null;
-
-        if (id != null){
-            client = dao.findById(id).get();
-        }else {
-            throw new ClientExceptionNotFound("Client not found");
+        try {
+            if (id != null) {
+                client = dao.findById(id).get();
+            } else {
+                throw new ClientExceptionNotFound("Client not found");
+            }
+        } catch (ClientExceptionNotFound e) {
+            e.printStackTrace();
         }
         return client;
     }
 
     @Override
-    public Client searchByCPF(String cpf) throws ClientExceptionNotFound {
+    public Client searchByCPF(String cpf) {
         Client client = null;
+        try {
+            if (cpf != null) {
+                client = dao.searchClientByCpfEquals(cpf);
+                if (client == null) throw new ClientExceptionNotFound("Client not found");
+            } else {
 
-        if (cpf != null){
-            client = dao.searchClientByCpfEquals(cpf);
-            if (client == null) throw new ClientExceptionNotFound("Client not found");
-        }else {
-            throw new ClientExceptionNotFound("Client not informed");
+                throw new ClientExceptionNotFound("Client not informed");
+
+            }
+        } catch (ClientExceptionNotFound e) {
+            throw new RuntimeException(e);
         }
         return client;
     }
 
     @Override
-    public List<Client> searchByName(String name) throws ClientExceptionNotFound {
+    public List<Client> searchByName(String name) {
         List<Client> client = null;
-
-        if (name != null){
-            client = dao.searchClientsByName(name);
-            if (client == null) throw new ClientExceptionNotFound("Client not found");
-        }else {
-            throw new ClientExceptionNotFound("Client not informed");
+        try {
+            if (name != null) {
+                client = dao.searchClientsByName(name);
+                if (client == null) throw new ClientExceptionNotFound("Client not found");
+            } else {
+                throw new ClientExceptionNotFound("Client not informed");
+            }
+        }catch (ClientExceptionNotFound e){
+            e.printStackTrace();
         }
         return client;
     }

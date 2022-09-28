@@ -5,10 +5,9 @@ import br.edu.utfpr.td.tsi.bank.loan.model.BankLoan;
 import java.util.List;
 
 public interface BankLoanController {
-    BankLoan simulateLoan(Double amount, Integer months);
-    void createLoan(BankLoan item);
+    void create(BankLoan item);
+    void update(BankLoan item);
+    void delete(Integer id);
     List<BankLoan> listAll();
     BankLoan listById(Integer id);
-
-
 }

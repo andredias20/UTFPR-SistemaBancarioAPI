@@ -10,12 +10,12 @@ import java.util.List;
 
 public interface ClientController {
 
-    void create(Client item) throws ClientExceptionRevenue;
-    void update(Client item) throws ClientException;
-    void delete(Integer id) throws ClientException;
-    Client searchById(Integer id) throws ClientExceptionNotFound;
-    Client searchByCPF(String cpf) throws ClientExceptionNotFound;
-    List<Client> searchByName(String name) throws ClientExceptionNotFound;
+    void create(Client item);
+    void update(Client item);
+    void delete(Integer id);
+    Client searchById(Integer id);
+    Client searchByCPF(String cpf);
+    List<Client> searchByName(String name);
     List<Client> searchAll();
 
 }

@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import br.edu.utfpr.td.tsi.bank.client.model.Client;
 
@@ -22,24 +23,18 @@ public class CreditCard implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @OneToOne(targetEntity = Client.class)
+    @NotBlank(message = "ClientID is mandatory")
     private Integer clientID;
+    @NotBlank(message = "Card Holder is mandatory")
     private String cardHolder;
+    @NotBlank(message = "Card number is mandatory")
     private Long cardNumber;
+    @NotBlank(message = "ValidThru is mandatory")
     private Date validThru;
+    @NotBlank(message = "Security code is mandatory")
     private Short securityCode;
 
-    public CreditCard(Integer id, Integer clientID, String cardHolder, Long cardNumber, Date validThru, Short securityCode) {
-        this.id = id;
-        this.clientID = clientID;
-        this.cardHolder = cardHolder;
-        this.cardNumber = cardNumber;
-        this.validThru = validThru;
-        this.securityCode = securityCode;
-    }
-
-    public CreditCard() {
-
-    }
+    public CreditCard() {}
 
     public Integer getId() {
         return id;

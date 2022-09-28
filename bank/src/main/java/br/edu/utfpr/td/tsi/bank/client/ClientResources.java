@@ -8,6 +8,7 @@ import br.edu.utfpr.td.tsi.bank.client.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -17,13 +18,13 @@ public class ClientResources {
     private ClientController mgr;
 
     @PostMapping(path = "/client", consumes = "application/json", produces = "application/json")
-    public Client create(@RequestBody Client item) throws ClientExceptionRevenue {
+    public Client create(@Valid @RequestBody Client item) throws ClientExceptionRevenue {
             mgr.create(item);
             return item;
     }
 
     @PutMapping(path = "/client{id}", consumes = "application/json", produces = "application/json")
-    public Client update(Integer id, Client item) throws ClientException{
+    public Client update(Integer id,@Valid Client item) throws ClientException{
         item.setId(id);
         mgr.update(item);
         return item;

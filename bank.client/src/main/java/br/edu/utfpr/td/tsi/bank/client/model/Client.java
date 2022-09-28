@@ -1,6 +1,9 @@
 package br.edu.utfpr.td.tsi.bank.client.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,35 +15,22 @@ public class Client implements Serializable {
 	@Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Integer id;
+    @NotBlank(message = "Name is mandatory")
     private String name;
 
     @Column(unique = true)
+    @Pattern(regexp = "\\d{3}.\\d{3}.\\d{3}-\\d{2}", message = "Value don't correspond to default value ###.###.###-##, where # is digits 0-9.")
     private String cpf;
+
     private Date birthDate;
+    @Email(message = "Email is not valid")
+    @NotBlank(message = "Email is mandatory")
     private String email;
+    @NotBlank(message = "Phone is mandatory")
     private String phone;
     private Double salary;
 
     public Client() {}
-
-    public Client(String name, String cpf, Date birthDate, String email, String phone, Double salary) {
-        this.id = id;
-        this.name = name;
-        this.cpf = cpf;
-        this.birthDate = birthDate;
-        this.email = email;
-        this.phone = phone;
-        this.salary = salary;
-    }
-    public Client(Integer id, String name, String cpf, Date birthDate, String email, String phone, Double salary) {
-        this.id = id;
-        this.name = name;
-        this.cpf = cpf;
-        this.birthDate = birthDate;
-        this.email = email;
-        this.phone = phone;
-        this.salary = salary;
-    }
 
     public Integer getId() {
         return id;
