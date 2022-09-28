@@ -25,8 +25,8 @@ public class Transaction implements Serializable {
     @NotBlank
     private Short destAgencyNumber;
     @NotBlank
-    private Double value;
-    private String msg;
+    private Double amountValue;
+    private String optionalMessage;
 
     @Column(insertable = false, updatable = false)
     @UpdateTimestamp
@@ -47,20 +47,20 @@ public class Transaction implements Serializable {
         this.id = id;
     }
 
-    public Double getValue() {
-        return value;
+    public Double getAmountValue() {
+        return amountValue;
     }
 
-    public void setValue(Double value) {
-        this.value = value;
+    public void setAmountValue(Double value) {
+        this.amountValue = value;
     }
 
-    public String getMsg() {
-        return msg;
+    public String getOptionalMessage() {
+        return optionalMessage;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setOptionalMessage(String msg) {
+        this.optionalMessage = msg;
     }
 
     public String getClientCPF() {

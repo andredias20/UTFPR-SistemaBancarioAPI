@@ -14,13 +14,12 @@ public class BankAccount implements Serializable {
     @NotBlank
     @OneToOne(targetEntity = br.edu.utfpr.td.tsi.bank.client.model.Client.class)
     private Integer client;
-
     @NotBlank
     private Integer agency;
     @NotBlank
     private Long accountNumber;
     @NotBlank
-    private Integer key;
+    private Integer password;
 
     public BankAccount() { }
 
@@ -48,12 +47,12 @@ public class BankAccount implements Serializable {
         this.accountNumber = accountNumber;
     }
 
-    public Integer getKey() {
-        return key;
+    public Integer getPassword() {
+        return password;
     }
 
-    public void setKey(Integer key) {
-        this.key = key;
+    public void setPassword(Integer key) {
+        this.password = key;
     }
 
     public Integer getClient() {

@@ -5,30 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33ab844e-bac2-49d5-9f62-6b7842b7b16d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_4_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_7_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/controller/CreditCardManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/bank.account.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/bank.account.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/TransactionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/TransactionManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/BankAccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/BankAccountDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/BankAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/bank.client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/bank.client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.credit.card/bank.credit.card.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/bank.credit.card.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/dao/CreditCardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/dao/CreditCardDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/model/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/model/CreditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.loan/bank.loan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/bank.loan.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.loan/src/main/java/br/edu/utfpr/td/tsi/bank/loan/controller/BankLoanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/src/main/java/br/edu/utfpr/td/tsi/bank/loan/controller/BankLoanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/bank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank/bank.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/client/ClientResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/client/ClientResources.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,37 +71,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_directory_selection&quot;: &quot;D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank/src/main/java/br/edu/utfpr/td/tsi/bank&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank.client/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.run.dashboard.notification&quot;: &quot;false&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1209f3e68082bb2898f6b3b40a4f337a&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_directory_selection": "D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank/src/main/java/br/edu/utfpr/td/tsi/bank",
+    "last_opened_file_path": "D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.run.dashboard.notification": "false",
+    "spring.configuration.checksum": "1209f3e68082bb2898f6b3b40a4f337a"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;h2&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect": [
+      "H2"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\bank.client\src\main\resources" />
@@ -137,15 +120,7 @@
       <recent name="br.edu.utfpr.td.tsi.bank.client.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="resource.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/bank.client/src/main/resources/resource.sql" />
-      <script-mode>FILE</script-mode>
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="bank" />
@@ -154,27 +129,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Run Dev" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" />
-      <module name="bank" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="br.edu.utfpr.td.tsi.bank.Application" />
-      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndTriggerFile" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Database Script.resource.sql" />
-      <item itemvalue="HTTP Request.generated-requests | #3" />
-      <item itemvalue="Spring Boot.Application" />
-      <item itemvalue="Spring Boot.Run Dev" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Database Script.resource.sql" />
-        <item itemvalue="HTTP Request.generated-requests | #3" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -190,6 +144,7 @@
       <workItem from="1664200846140" duration="13626000" />
       <workItem from="1664293043558" duration="7205000" />
       <workItem from="1664335242179" duration="6567000" />
+      <workItem from="1664366373887" duration="3472000" />
     </task>
     <servers />
   </component>
