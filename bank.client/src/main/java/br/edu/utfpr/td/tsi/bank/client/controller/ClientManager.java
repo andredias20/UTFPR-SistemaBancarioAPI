@@ -1,14 +1,13 @@
 package br.edu.utfpr.td.tsi.bank.client.controller;
 
 import br.edu.utfpr.td.tsi.bank.client.dao.ClientDAO;
-import br.edu.utfpr.td.tsi.bank.client.exception.ClientCPFCannotBeCreated;
 import br.edu.utfpr.td.tsi.bank.client.exception.ClientNotFoundException;
 import br.edu.utfpr.td.tsi.bank.client.exception.ClientSalaryNotApplicable;
 import br.edu.utfpr.td.tsi.bank.client.model.Client;
+import br.edu.utfpr.td.tsi.bank.client.exception.ClientCPFCannotBeCreated;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @Component

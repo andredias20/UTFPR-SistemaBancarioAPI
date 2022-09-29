@@ -1,6 +1,6 @@
 package br.edu.utfpr.td.tsi.bank.client.dao;
 
-import br.edu.utfpr.td.tsi.bank.client.model.*;
+import br.edu.utfpr.td.tsi.bank.client.model.Client;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

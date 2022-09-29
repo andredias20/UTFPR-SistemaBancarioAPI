@@ -1,8 +1,8 @@
 package br.edu.utfpr.td.tsi.bank.client.controller;
 
-import br.edu.utfpr.td.tsi.bank.client.exception.ClientCPFCannotBeCreated;
 import br.edu.utfpr.td.tsi.bank.client.exception.ClientNotFoundException;
 import br.edu.utfpr.td.tsi.bank.client.model.Client;
+import br.edu.utfpr.td.tsi.bank.client.exception.ClientCPFCannotBeCreated;
 
 import java.util.List;
 

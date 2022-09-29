@@ -9,7 +9,6 @@ import br.edu.utfpr.td.tsi.bank.account.model.Transaction;
 import br.edu.utfpr.td.tsi.bank.client.controller.ClientManager;
 import br.edu.utfpr.td.tsi.bank.client.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 
 import java.util.Date;
 import java.util.List;
@@ -29,11 +28,25 @@ public class BankAccountManager implements BankAccountController {
         Client client = clientManager.searchById(item.getClient());
         BankAccount exists = dao.existsByAccountNumber(item.getAgency(), item.getAccountNumber());
         if(exists != null) throw new BankAccountNotAllowedException();
+        if(!exists.isActive()){
+            exists.setActive(true);
+            return dao.save(exists);
+        }
         return dao.save(item);
     }
 
     @Override
+    public BankAccount updateAccount(BankAccount item) {
+        if(dao.existsById(item.getId())){
+            return dao.save(item);
+        }else {
+            throw new BankAccountNotFoundException();
+        }
+    }
+
+    @Override
     public Transaction transfer(Transaction item) {
+        item.getClientId();
         return transDao.save(item);
     }
 
@@ -50,8 +63,8 @@ public class BankAccountManager implements BankAccountController {
     }
 
     @Override
-    public List<Transaction> transactionsByDate(BankAccount bank, Date start, Date end) {
-        List<Transaction> transactions = transDao.listTransactionsByDate(bank.getClient(), start, end);
+    public List<Transaction> transactionsByDate(Integer client_id, Date start, Date end) {
+        List<Transaction> transactions = transDao.listTransactionsByDate(client_id, start, end);
         if(transactions == null) throw new BankAccountNotFoundException();
         return transactions;
     }

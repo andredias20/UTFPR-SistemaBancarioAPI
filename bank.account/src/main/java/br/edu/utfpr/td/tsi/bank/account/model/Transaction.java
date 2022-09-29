@@ -1,5 +1,6 @@
 package br.edu.utfpr.td.tsi.bank.account.model;
 
+import br.edu.utfpr.td.tsi.bank.client.model.Client;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -18,7 +19,7 @@ public class Transaction implements Serializable {
     private Integer id;
 
     @NotBlank
-    @OneToOne(targetEntity = br.edu.utfpr.td.tsi.bank.client.model.Client.class)
+    @OneToOne(targetEntity = Client.class)
     private Integer client;
     @Pattern(regexp = "\n{3}.\n{3}.\n{3}-\n{2}", message = "Value don't correspond to default value ###.###.###-##, where # is digits 0-9.")
     private String otherCPF;
@@ -65,11 +66,11 @@ public class Transaction implements Serializable {
         this.optionalMessage = msg;
     }
 
-    public Integer getClientCPF() {
+    public Integer getClientId() {
         return client;
     }
 
-    public void setClientCPF(Integer client) {
+    public void setClientId(Integer client) {
         this.client = client;
     }
 

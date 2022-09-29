@@ -5,25 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33ab844e-bac2-49d5-9f62-6b7842b7b16d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/exceptions/BankAccountNotAllowedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/exceptions/BankAccountNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exception/ClientCPFCannotBeCreated.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exception/ClientNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exception/ClientSalaryNotApplicable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/model/CustomErrorAtributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/exceptions/TransactionNotAllowedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/BankAccountResources.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/BankAccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/BankAccountDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/TransactionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/TransactionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/BankAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exceptions/ClientException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exceptions/ClientExceptionNotFound.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exceptions/ClientExceptionRevenue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/client/ClientResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/client/ClientResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/dao/ClientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/dao/ClientDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/client/ClientResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/ClientResources.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,40 +87,40 @@
     <option name="showModules" value="false" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank/src/main/java/br/edu/utfpr/td/tsi/bank",
-    "last_opened_file_path": "D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "show.run.dashboard.notification": "false",
-    "spring.configuration.checksum": "1209f3e68082bb2898f6b3b40a4f337a"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank/src/main/java/br/edu/utfpr/td/tsi/bank&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;show.run.dashboard.notification&quot;: &quot;false&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1209f3e68082bb2898f6b3b40a4f337a&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect": [
-      "H2"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect&quot;: [
+      &quot;H2&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\bank.client\src\main\resources" />
@@ -169,6 +161,7 @@
       <workItem from="1664293043558" duration="7205000" />
       <workItem from="1664335242179" duration="6567000" />
       <workItem from="1664366373887" duration="27219000" />
+      <workItem from="1664452196193" duration="9409000" />
     </task>
     <servers />
   </component>

@@ -8,10 +8,11 @@ import java.util.List;
 
 public interface BankAccountController {
     BankAccount openAccount(BankAccount item);
+    BankAccount updateAccount(BankAccount item);
     Transaction transfer(Transaction item);
     Double balance(Integer clientID);
     List<Transaction> getTransactions(Integer client_id);
-    List<Transaction> transactionsByDate(BankAccount bank, Date start, Date end);
+    List<Transaction> transactionsByDate(Integer client_id, Date start, Date end);
     BankAccount listById(Integer id);
     List<BankAccount> listAll();
 

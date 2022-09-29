@@ -1,5 +1,7 @@
 package br.edu.utfpr.td.tsi.bank.account.model;
 
+import br.edu.utfpr.td.tsi.bank.client.model.Client;
+
 import java.io.Serializable;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -12,7 +14,10 @@ public class BankAccount implements Serializable {
     private Integer id;
 
     @NotBlank
-    @OneToOne(targetEntity = br.edu.utfpr.td.tsi.bank.client.model.Client.class)
+    private boolean active;
+
+    @NotBlank
+    @OneToOne(targetEntity = Client.class)
     private Integer client;
     @NotBlank
     private Integer agency;
@@ -33,6 +38,13 @@ public class BankAccount implements Serializable {
 
     public Integer getAgency() {
         return agency;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     public void setAgency(Integer agency) {

@@ -1,4 +1,4 @@
-package br.edu.utfpr.td.tsi.bank.client;
+package br.edu.utfpr.td.tsi.bank.resources;
 
 import br.edu.utfpr.td.tsi.bank.client.controller.ClientController;
 import br.edu.utfpr.td.tsi.bank.client.model.Client;
@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
