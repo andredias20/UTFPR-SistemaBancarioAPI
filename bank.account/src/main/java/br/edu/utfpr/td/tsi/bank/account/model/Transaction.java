@@ -16,8 +16,10 @@ public class Transaction implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Pattern(regexp = "\n{3}.\n{3}.\n{3}-\n{2}", message = "Value don't correspond to default value ###.###.###-##, where # is digits 0-9.")
-    private String clientCPF;
+
+    @NotBlank
+    @OneToOne(targetEntity = br.edu.utfpr.td.tsi.bank.client.model.Client.class)
+    private Integer client;
     @Pattern(regexp = "\n{3}.\n{3}.\n{3}-\n{2}", message = "Value don't correspond to default value ###.###.###-##, where # is digits 0-9.")
     private String otherCPF;
     @NotBlank
@@ -63,12 +65,12 @@ public class Transaction implements Serializable {
         this.optionalMessage = msg;
     }
 
-    public String getClientCPF() {
-        return clientCPF;
+    public Integer getClientCPF() {
+        return client;
     }
 
-    public void setClientCPF(String clientCPF) {
-        this.clientCPF = clientCPF;
+    public void setClientCPF(Integer client) {
+        this.client = client;
     }
 
     public String getOtherCPF() {

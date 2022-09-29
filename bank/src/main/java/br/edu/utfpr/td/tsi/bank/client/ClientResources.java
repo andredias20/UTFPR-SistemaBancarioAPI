@@ -1,55 +1,63 @@
 package br.edu.utfpr.td.tsi.bank.client;
 
 import br.edu.utfpr.td.tsi.bank.client.controller.ClientController;
-import br.edu.utfpr.td.tsi.bank.client.exceptions.ClientException;
-import br.edu.utfpr.td.tsi.bank.client.exceptions.ClientExceptionNotFound;
-import br.edu.utfpr.td.tsi.bank.client.exceptions.ClientExceptionRevenue;
 import br.edu.utfpr.td.tsi.bank.client.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
 public class ClientResources {
-
     @Autowired
     private ClientController mgr;
 
     @PostMapping(path = "/client", consumes = "application/json", produces = "application/json")
-    public Client create(@Valid @RequestBody Client item) throws ClientExceptionRevenue {
+    public ResponseEntity<Client> create(@Valid @RequestBody Client item) {
             mgr.create(item);
-            return item;
+            return new ResponseEntity<>(item, HttpStatus.CREATED);
     }
 
-    @PutMapping(path = "/client{id}", consumes = "application/json", produces = "application/json")
-    public Client update(Integer id,@Valid Client item) throws ClientException{
+    @PutMapping(path = "/client", consumes = "application/json", produces = "application/json", params = "id")
+    public ResponseEntity<Client> update(@RequestParam Integer id, @Valid @RequestBody Client item) {
         item.setId(id);
         mgr.update(item);
-        return item;
+        return new ResponseEntity<>(item, HttpStatus.ACCEPTED);
     }
 
-    @DeleteMapping(path = "/client{id}")
-    public void delete(@RequestParam Integer id) throws ClientException{
+    @DeleteMapping(path = "/client", params = "id")
+    public ResponseEntity<String> delete(@RequestParam Integer id) throws ChangeSetPersister.NotFoundException {
         mgr.delete(id);
+        return new ResponseEntity<>("Cliente: "+id+" Deleted", HttpStatus.ACCEPTED);
     }
 
 
-    @GetMapping(path = "/client{id}", produces = "application/json")
-    public Client searchById(@RequestParam Integer id) throws ClientExceptionNotFound {
-        return mgr.searchById(id);
+    @GetMapping(path = "/client", params = "id")
+    public ResponseEntity<Client> searchById(@RequestParam(name = "id") Integer id) {
+        Client client = mgr.searchById(id);
+        return new ResponseEntity<>(client, HttpStatus.OK);
     }
 
-    public Client searchByCPF(String cpf) {
-        return null;
+    @GetMapping(path = "/client", params = "cpf")
+    public ResponseEntity<Client> searchByCPF(@RequestParam("cpf") String cpf) {
+        Client client = mgr.searchByCPF(cpf);
+        return new ResponseEntity<>(client, HttpStatus.OK);
     }
 
-    public List<Client> searchByName(String name) {
-        return null;
+    @GetMapping(path = "/client", params = "name")
+    @ResponseBody
+    public ResponseEntity<List<Client>> searchByName(@RequestParam(name = "name") String name) {
+
+        return new ResponseEntity<>(mgr.searchByName(name), HttpStatus.OK);
     }
 
     @GetMapping(path = "/client")
+    @ResponseBody
     public List<Client> searchAll() {
         return mgr.searchAll();
     }

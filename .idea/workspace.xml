@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33ab844e-bac2-49d5-9f62-6b7842b7b16d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/exceptions/BankAccountNotAllowedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/exceptions/BankAccountNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exception/ClientCPFCannotBeCreated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exception/ClientNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exception/ClientSalaryNotApplicable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/model/CustomErrorAtributes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/BankAccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/BankAccountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/TransactionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/TransactionDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/model/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exceptions/ClientException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exceptions/ClientExceptionNotFound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/exceptions/ClientExceptionRevenue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/client/ClientResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/client/ClientResources.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,13 +33,16 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
+  <component name="EndpointsView">
+    <option name="showSidePanel" value="false" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,6 +50,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountManager.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/dao/BankAccountDAO.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/model/Client.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="JpbToolWindowState">
@@ -61,15 +81,19 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2FF1YPS1ynBRMWYiH0ozdqwwcxl" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -92,7 +116,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "show.run.dashboard.notification": "false",
     "spring.configuration.checksum": "1209f3e68082bb2898f6b3b40a4f337a"
   },
@@ -144,7 +168,7 @@
       <workItem from="1664200846140" duration="13626000" />
       <workItem from="1664293043558" duration="7205000" />
       <workItem from="1664335242179" duration="6567000" />
-      <workItem from="1664366373887" duration="3472000" />
+      <workItem from="1664366373887" duration="27219000" />
     </task>
     <servers />
   </component>

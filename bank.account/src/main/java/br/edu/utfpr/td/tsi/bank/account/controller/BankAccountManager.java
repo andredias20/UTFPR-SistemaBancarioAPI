@@ -2,59 +2,67 @@ package br.edu.utfpr.td.tsi.bank.account.controller;
 
 import br.edu.utfpr.td.tsi.bank.account.dao.BankAccountDAO;
 import br.edu.utfpr.td.tsi.bank.account.dao.TransactionDAO;
+import br.edu.utfpr.td.tsi.bank.account.exceptions.BankAccountNotAllowedException;
+import br.edu.utfpr.td.tsi.bank.account.exceptions.BankAccountNotFoundException;
 import br.edu.utfpr.td.tsi.bank.account.model.BankAccount;
 import br.edu.utfpr.td.tsi.bank.account.model.Transaction;
 import br.edu.utfpr.td.tsi.bank.client.controller.ClientManager;
 import br.edu.utfpr.td.tsi.bank.client.model.Client;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister;
 
 import java.util.Date;
 import java.util.List;
 
-public class BankAccountManager implements BankAccountController{
+public class BankAccountManager implements BankAccountController {
 
 
-    BankAccountDAO bankAccountDAO;
-    TransactionDAO transactionDAO;
+    @Autowired
+    BankAccountDAO dao;
+    @Autowired
+    TransactionDAO transDao;
+    @Autowired
     ClientManager clientManager;
 
     @Override
-    public void openAccount(BankAccount item) {
+    public BankAccount openAccount(BankAccount item) {
         Client client = clientManager.searchById(item.getClient());
-        boolean alreadyExists = bankAccountDAO.existsByAccountNumber(item.getAgency(), item.getAccountNumber());
-
-            if (client != null && !alreadyExists) {
-                bankAccountDAO.save(item);
-            }
-
+        BankAccount exists = dao.existsByAccountNumber(item.getAgency(), item.getAccountNumber());
+        if(exists != null) throw new BankAccountNotAllowedException();
+        return dao.save(item);
     }
 
     @Override
-    public void transfer(Transaction item) {
-
+    public Transaction transfer(Transaction item) {
+        return transDao.save(item);
     }
 
     @Override
     public Double balance(Integer clientID) {
-        return null;
+        return transDao.clientBalance(clientID);
     }
 
     @Override
-    public List<Transaction> getTransactions(Integer bank_id) {
-        return null;
+    public List<Transaction> getTransactions(Integer client_id) {
+        List<Transaction> transactions = transDao.listTransactionsByClientId(client_id);
+        if(transactions == null) throw new BankAccountNotFoundException();
+        return transactions;
     }
 
     @Override
     public List<Transaction> transactionsByDate(BankAccount bank, Date start, Date end) {
-        return null;
+        List<Transaction> transactions = transDao.listTransactionsByDate(bank.getClient(), start, end);
+        if(transactions == null) throw new BankAccountNotFoundException();
+        return transactions;
     }
 
     @Override
     public BankAccount listById(Integer id) {
-        return null;
+        return dao.findById(id).orElseThrow(BankAccountNotFoundException::new);
     }
 
     @Override
     public List<BankAccount> listAll() {
-        return null;
+        return dao.searchAll();
     }
 }
