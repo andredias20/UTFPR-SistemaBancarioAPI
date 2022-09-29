@@ -7,8 +7,8 @@ import java.util.List;
 public interface CreditCardController {
     List<CreditCard> listAll();
     CreditCard listById(Integer id);
-    void create(CreditCard item);
+    CreditCard create(CreditCard item);
     void delete(Integer id);
-    CreditCard update(CreditCard item);
+    CreditCard update(CreditCard item, Integer id);
 
 }
