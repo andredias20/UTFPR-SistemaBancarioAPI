@@ -1,15 +1,14 @@
 package br.edu.utfpr.td.tsi.bank.resources;
 
 import br.edu.utfpr.td.tsi.bank.account.controller.BankAccountController;
-import br.edu.utfpr.td.tsi.bank.account.controller.BankAccountManager;
 import br.edu.utfpr.td.tsi.bank.account.model.BankAccount;
 import br.edu.utfpr.td.tsi.bank.account.model.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.Date;
 import java.util.List;
 
@@ -20,20 +19,20 @@ public class BankAccountResources {
     private BankAccountController mgr;
 
     @PostMapping(path = "/bank/account", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<BankAccount> openAccount(@Valid BankAccount item) {
+    public ResponseEntity<BankAccount> openAccount(@Validated BankAccount item) {
         BankAccount account = mgr.openAccount(item);
         return new ResponseEntity<>(account, HttpStatus.CREATED);
     }
 
     @PutMapping(path = "/bank/account", params = "id")
-    public ResponseEntity<BankAccount> updateAccount(@Valid @RequestBody BankAccount item, @RequestParam Integer id){
+    public ResponseEntity<BankAccount> updateAccount(@Validated @RequestBody BankAccount item, @RequestParam Integer id){
         item.setId(id);
         BankAccount account = mgr.updateAccount(item);
         return new ResponseEntity<>(account, HttpStatus.ACCEPTED);
     }
 
     @PostMapping(path = "/bank/account/transaction")
-    public ResponseEntity<Transaction> transfer(@Valid @RequestBody Transaction item) {
+    public ResponseEntity<Transaction> transfer(@Validated @RequestBody Transaction item) {
         Transaction transaction = mgr.transfer(item);
         return new ResponseEntity<>(transaction, HttpStatus.CREATED);
     }

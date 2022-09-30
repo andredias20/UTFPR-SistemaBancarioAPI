@@ -1,7 +1,7 @@
 package br.edu.utfpr.td.tsi.bank.account.controller;
 
-import br.edu.utfpr.td.tsi.bank.account.model.*;
-import org.springframework.data.crossstore.ChangeSetPersister;
+import br.edu.utfpr.td.tsi.bank.account.model.BankAccount;
+import br.edu.utfpr.td.tsi.bank.account.model.Transaction;
 
 import java.util.Date;
 import java.util.List;

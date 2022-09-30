@@ -1,15 +1,13 @@
 package br.edu.utfpr.td.tsi.bank.resources;
 
 import br.edu.utfpr.td.tsi.bank.loan.controller.BankLoanController;
-import br.edu.utfpr.td.tsi.bank.loan.controller.BankLoanManager;
-import br.edu.utfpr.td.tsi.bank.loan.dao.BankLoanDAO;
 import br.edu.utfpr.td.tsi.bank.loan.model.BankLoan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -18,7 +16,7 @@ public class BankLoanResources {
     BankLoanController mgr;
 
     @PostMapping(path = "/bank/loan")
-    public ResponseEntity<BankLoan> create(@Valid @RequestBody BankLoan item) {
+    public ResponseEntity<BankLoan> create(@Validated @RequestBody BankLoan item) {
         BankLoan loan = mgr.create(item);
         return new ResponseEntity<>(loan, HttpStatus.CREATED);
     }

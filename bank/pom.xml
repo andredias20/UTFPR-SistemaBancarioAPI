@@ -9,9 +9,18 @@
 		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>br.edu.utfpr.td.tsi</groupId>
 	<artifactId>bank</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<modules>
+		<module>../bank.client</module>
+		<module>../bank.account</module>
+		<module>../bank.credit.card</module>
+		<module>../bank.loan</module>
+	</modules>
+
 	<name>bank</name>
 	<description>BankSO Developed for a project in the </description>
 	<properties>
@@ -27,12 +36,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
@@ -41,13 +44,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>br.edu.utfpr.td.tsi</groupId>
 			<artifactId>bank.client</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
 		<dependency>
 			<groupId>br.edu.utfpr.td.tsi</groupId>
 			<artifactId>bank.credit.card</artifactId>
@@ -63,7 +64,6 @@
 			<artifactId>bank.loan</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>

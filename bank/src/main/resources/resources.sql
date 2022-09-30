@@ -1,1 +1,1 @@
-INSERT INTO CLIENT VALUES(1, '2000-05-04', '093.732.719-03', 'andre@gmail.com', 'Andre De Carli Dias','45 99833-8540', 2000.00);
+INSERT INTO client VALUES(1, '2000-05-04', '093.732.719-03', 'andre@gmail.com', 'Andre De Carli Dias','45 99833-8540', 2000.00);

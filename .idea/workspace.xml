@@ -1,12 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="4" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33ab844e-bac2-49d5-9f62-6b7842b7b16d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_4_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_7_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/CreditCardResouces.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/CreditCardResouces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/bank.account.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/bank.account.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.client/bank.client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/bank.client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.credit.card/bank.credit.card.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/bank.credit.card.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.credit.card/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.loan/bank.loan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/bank.loan.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.loan/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/bank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank/bank.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/BankAccountResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/BankAccountResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/BankLoanResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/BankLoanResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/ClientResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/ClientResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/CreditCardResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/CreditCardResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/src/main/resources/resources.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/resources/resources.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +45,7 @@
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="false" />
   </component>
   <component name="EndpointsView">
     <option name="showSidePanel" value="false" />
@@ -79,40 +110,40 @@
     <option name="showModules" value="false" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_directory_selection&quot;: &quot;D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank/src/main/java/br/edu/utfpr/td/tsi/bank&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
-    &quot;show.run.dashboard.notification&quot;: &quot;false&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1209f3e68082bb2898f6b3b40a4f337a&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_directory_selection": "D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank/src/main/java/br/edu/utfpr/td/tsi/bank",
+    "last_opened_file_path": "D:/Desenvolvimento/dev/Workspaces/Eclipse - Workspace/sistema-bancario-v2/sistema.bancario/bank.client/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "show.run.dashboard.notification": "false",
+    "spring.configuration.checksum": "1209f3e68082bb2898f6b3b40a4f337a"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;h2&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect&quot;: [
-      &quot;H2&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect": [
+      "H2"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\bank.client\src\main\resources" />
@@ -128,30 +159,16 @@
       <recent name="br.edu.utfpr.td.tsi.bank.client.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
+      <option name="ALTERNATIVE_JRE_PATH" value="temurin-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="bank" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="br.edu.utfpr.td.tsi.bank.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="ClientResources.json" type="SwaggerCodegen">
-      <option name="activeConfigurationType" value="FILE" />
-      <option name="configurationPath" value="" />
-      <option name="customJreEnabled" value="false" />
-      <option name="customTemplatesPath" value="" />
-      <option name="enableDebugLogging" value="false" />
-      <option name="generateToPath" value="D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\gen" />
-      <option name="generationParameters">
-        <list />
-      </option>
-      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
-      <option name="jdkPath" value="Default" />
-      <option name="language" value="java" />
-      <option name="specificationPath" value="D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\bank\src\main\java\br\edu\utfpr\td\tsi\bank\resources\ClientResources.json" />
-      <method v="2" />
     </configuration>
     <configuration default="true" type="SwaggerCodegen">
       <option name="activeConfigurationType" value="FILE" />
@@ -186,7 +203,7 @@
       <workItem from="1664335242179" duration="6567000" />
       <workItem from="1664366373887" duration="27219000" />
       <workItem from="1664452196193" duration="18781000" />
-      <workItem from="1664543038524" duration="2195000" />
+      <workItem from="1664543038524" duration="9596000" />
     </task>
     <servers />
   </component>

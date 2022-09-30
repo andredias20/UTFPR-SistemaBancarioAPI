@@ -2,11 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+    <parent>
+        <artifactId>bank</artifactId>
+        <groupId>br.edu.utfpr.td.tsi</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    
-    <groupId>br.edu.utfpr.td.tsi</groupId>
 	<artifactId>bank.credit.card</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -18,11 +20,11 @@
     </properties>
     
     <dependencies>
-    	<dependency>
-    		<groupId>br.edu.utfpr.td.tsi</groupId>
-    		<artifactId>bank.client</artifactId>
-    		<version>0.0.1-SNAPSHOT</version>
-    	</dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
     </dependencies>
 
 </project>

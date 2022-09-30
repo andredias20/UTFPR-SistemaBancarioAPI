@@ -5,9 +5,9 @@ import br.edu.utfpr.td.tsi.bank.credit.card.model.CreditCard;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -28,7 +28,7 @@ public class CreditCardResources {
     }
 
     @PostMapping(value = "/bank/credit-card")
-    public ResponseEntity<CreditCard> create(@Valid CreditCard item) {
+    public ResponseEntity<CreditCard> create(@Validated CreditCard item) {
         CreditCard card = mgr.create(item);
         return new ResponseEntity<>(card, HttpStatus.CREATED);
     }
@@ -40,7 +40,7 @@ public class CreditCardResources {
     }
 
     @PutMapping(path = "/bank/credit-card", params = "id")
-    public ResponseEntity<CreditCard> update(@Valid CreditCard item, @RequestParam Integer id) {
+    public ResponseEntity<CreditCard> update(@Validated CreditCard item, @RequestParam Integer id) {
         CreditCard card = mgr.update(item, id);
         return new ResponseEntity<>(card, HttpStatus.ACCEPTED);
     }
