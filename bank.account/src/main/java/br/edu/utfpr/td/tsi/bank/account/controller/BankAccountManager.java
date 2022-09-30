@@ -9,12 +9,13 @@ import br.edu.utfpr.td.tsi.bank.account.model.Transaction;
 import br.edu.utfpr.td.tsi.bank.client.controller.ClientManager;
 import br.edu.utfpr.td.tsi.bank.client.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import java.util.Date;
 import java.util.List;
 
+@Controller
 public class BankAccountManager implements BankAccountController {
-
 
     @Autowired
     BankAccountDAO dao;

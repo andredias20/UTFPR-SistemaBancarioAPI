@@ -6,11 +6,11 @@ import br.edu.utfpr.td.tsi.bank.client.exception.ClientSalaryNotApplicable;
 import br.edu.utfpr.td.tsi.bank.client.model.Client;
 import br.edu.utfpr.td.tsi.bank.client.exception.ClientCPFCannotBeCreated;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
-@Component
+@Controller
 public class ClientManager implements ClientController {
 
     @Autowired

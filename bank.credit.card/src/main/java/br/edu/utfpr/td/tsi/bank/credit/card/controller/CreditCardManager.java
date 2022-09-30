@@ -5,9 +5,11 @@ import br.edu.utfpr.td.tsi.bank.credit.card.exception.CreditCardInvalidArguments
 import br.edu.utfpr.td.tsi.bank.credit.card.exception.CreditCardNotFoundException;
 import br.edu.utfpr.td.tsi.bank.credit.card.model.CreditCard;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
+@Controller
 public class CreditCardManager implements CreditCardController{
 
     @Autowired

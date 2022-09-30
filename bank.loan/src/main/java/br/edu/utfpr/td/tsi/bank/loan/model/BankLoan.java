@@ -21,7 +21,7 @@ public class BankLoan implements Serializable {
     @GeneratedValue( strategy = GenerationType.AUTO)
     private Integer id;
     @ManyToOne(targetEntity= Client.class)
-    private Integer clientID;
+    private Integer client;
     private Long loanValue;
     private Integer monthsForPayment;
     private Double taxPercentage;
@@ -31,7 +31,7 @@ public class BankLoan implements Serializable {
 
     public BankLoan(Integer id, Integer clientID, Long loanValue, Integer monthsForPayment, Double taxPercentage) {
         this.id = id;
-        this.clientID = clientID;
+        this.client = clientID;
         this.loanValue = loanValue;
         this.monthsForPayment = monthsForPayment;
         this.taxPercentage = taxPercentage;
@@ -45,12 +45,12 @@ public class BankLoan implements Serializable {
         this.id = id;
     }
 
-    public Integer getClientID() {
-        return clientID;
+    public Integer getClient() {
+        return client;
     }
 
-    public void setClientID(Integer clientID) {
-        this.clientID = clientID;
+    public void setClient(Integer clientID) {
+        this.client = clientID;
     }
 
     public Long getLoanValue() {

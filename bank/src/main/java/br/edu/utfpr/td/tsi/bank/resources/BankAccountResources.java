@@ -1,5 +1,6 @@
 package br.edu.utfpr.td.tsi.bank.resources;
 
+import br.edu.utfpr.td.tsi.bank.account.controller.BankAccountController;
 import br.edu.utfpr.td.tsi.bank.account.controller.BankAccountManager;
 import br.edu.utfpr.td.tsi.bank.account.model.BankAccount;
 import br.edu.utfpr.td.tsi.bank.account.model.Transaction;
@@ -12,10 +13,11 @@ import javax.validation.Valid;
 import java.util.Date;
 import java.util.List;
 
+@RestController
 public class BankAccountResources {
 
     @Autowired
-    private BankAccountManager mgr;
+    private BankAccountController mgr;
 
     @PostMapping(path = "/bank/account", consumes = "application/json", produces = "application/json")
     public ResponseEntity<BankAccount> openAccount(@Valid BankAccount item) {
