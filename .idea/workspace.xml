@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33ab844e-bac2-49d5-9f62-6b7842b7b16d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bank.loan/src/main/java/br/edu/utfpr/td/tsi/bank/loan/exception/BankLoanNotEnoughSalaryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank.loan/src/main/java/br/edu/utfpr/td/tsi/bank/loan/exception/BankLoanNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/BankLoanResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/CreditCardResouces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.account/src/main/java/br/edu/utfpr/td/tsi/bank/account/controller/BankAccountManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.client/src/main/java/br/edu/utfpr/td/tsi/bank/client/controller/ClientManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/controller/CreditCardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/controller/CreditCardManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/exception/CreditCardNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.credit.card/src/main/java/br/edu/utfpr/td/tsi/bank/credit/card/exception/CreditCardNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.loan/src/main/java/br/edu/utfpr/td/tsi/bank/loan/controller/BankLoanManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/src/main/java/br/edu/utfpr/td/tsi/bank/loan/controller/BankLoanManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank.loan/src/main/java/br/edu/utfpr/td/tsi/bank/loan/model/BankLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank.loan/src/main/java/br/edu/utfpr/td/tsi/bank/loan/model/BankLoan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/BankAccountResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/BankAccountResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/resources/resources.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/CreditCardResouces.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/br/edu/utfpr/td/tsi/bank/resources/CreditCardResouces.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +186,7 @@
       <workItem from="1664335242179" duration="6567000" />
       <workItem from="1664366373887" duration="27219000" />
       <workItem from="1664452196193" duration="18781000" />
+      <workItem from="1664543038524" duration="2195000" />
     </task>
     <servers />
   </component>
