@@ -9,6 +9,9 @@ import javax.validation.constraints.NotBlank;
 @Entity
 @Table(name = "bank_account")
 public class BankAccount implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

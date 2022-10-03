@@ -1,0 +1,9 @@
+br\edu\utfpr\td\tsi\bank\account\controller\BankAccountManager.class
+br\edu\utfpr\td\tsi\bank\account\exceptions\BankAccountNotFoundException.class
+br\edu\utfpr\td\tsi\bank\account\controller\BankAccountController.class
+br\edu\utfpr\td\tsi\bank\account\exceptions\BankAccountNotAllowedException.class
+br\edu\utfpr\td\tsi\bank\account\dao\BankAccountDAO.class
+br\edu\utfpr\td\tsi\bank\account\exceptions\TransactionNotAllowedException.class
+br\edu\utfpr\td\tsi\bank\account\model\BankAccount.class
+br\edu\utfpr\td\tsi\bank\account\model\Transaction.class
+br\edu\utfpr\td\tsi\bank\account\dao\TransactionDAO.class

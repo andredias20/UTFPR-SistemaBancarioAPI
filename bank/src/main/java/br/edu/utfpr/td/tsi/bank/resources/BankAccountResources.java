@@ -1,22 +1,28 @@
 package br.edu.utfpr.td.tsi.bank.resources;
 
-import br.edu.utfpr.td.tsi.bank.account.controller.BankAccountController;
-import br.edu.utfpr.td.tsi.bank.account.model.BankAccount;
-import br.edu.utfpr.td.tsi.bank.account.model.Transaction;
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
-import java.util.List;
+import br.edu.utfpr.td.tsi.bank.account.controller.BankAccountManager;
+import br.edu.utfpr.td.tsi.bank.account.model.BankAccount;
+import br.edu.utfpr.td.tsi.bank.account.model.Transaction;
 
 @RestController
 public class BankAccountResources {
 
     @Autowired
-    private BankAccountController mgr;
+    private BankAccountManager mgr;
 
     @PostMapping(path = "/bank/account", consumes = "application/json", produces = "application/json")
     public ResponseEntity<BankAccount> openAccount(@Validated BankAccount item) {

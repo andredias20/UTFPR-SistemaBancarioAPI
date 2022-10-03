@@ -1,5 +1,11 @@
 package br.edu.utfpr.td.tsi.bank.account.controller;
 
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
 import br.edu.utfpr.td.tsi.bank.account.dao.BankAccountDAO;
 import br.edu.utfpr.td.tsi.bank.account.dao.TransactionDAO;
 import br.edu.utfpr.td.tsi.bank.account.exceptions.BankAccountNotAllowedException;
@@ -7,26 +13,21 @@ import br.edu.utfpr.td.tsi.bank.account.exceptions.BankAccountNotFoundException;
 import br.edu.utfpr.td.tsi.bank.account.model.BankAccount;
 import br.edu.utfpr.td.tsi.bank.account.model.Transaction;
 import br.edu.utfpr.td.tsi.bank.client.controller.ClientManager;
-import br.edu.utfpr.td.tsi.bank.client.model.Client;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-
-import java.util.Date;
-import java.util.List;
 
 @Controller
 public class BankAccountManager implements BankAccountController {
 
-    @Autowired
-    BankAccountDAO dao;
-    @Autowired
-    TransactionDAO transDao;
-    @Autowired
-    ClientManager clientManager;
+	@Autowired
+    private BankAccountDAO dao;
+	@Autowired
+    private TransactionDAO transDao;
+	@Autowired
+    private ClientManager clientManager;
 
-    @Override
+    @SuppressWarnings("null")
+	@Override
     public BankAccount openAccount(BankAccount item) {
-        Client client = clientManager.searchById(item.getClient());
+        clientManager.searchById(item.getClient());
         BankAccount exists = dao.existsByAccountNumber(item.getAgency(), item.getAccountNumber());
         if(exists != null) throw new BankAccountNotAllowedException();
         if(!exists.isActive()){

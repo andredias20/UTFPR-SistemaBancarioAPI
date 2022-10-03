@@ -1,19 +1,20 @@
 package br.edu.utfpr.td.tsi.bank.client.controller;
 
-import br.edu.utfpr.td.tsi.bank.client.dao.ClientDAO;
-import br.edu.utfpr.td.tsi.bank.client.exception.ClientNotFoundException;
-import br.edu.utfpr.td.tsi.bank.client.exception.ClientSalaryNotApplicable;
-import br.edu.utfpr.td.tsi.bank.client.model.Client;
-import br.edu.utfpr.td.tsi.bank.client.exception.ClientCPFCannotBeCreated;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import java.util.List;
+import br.edu.utfpr.td.tsi.bank.client.dao.ClientDAO;
+import br.edu.utfpr.td.tsi.bank.client.exception.ClientCPFCannotBeCreated;
+import br.edu.utfpr.td.tsi.bank.client.exception.ClientNotFoundException;
+import br.edu.utfpr.td.tsi.bank.client.exception.ClientSalaryNotApplicable;
+import br.edu.utfpr.td.tsi.bank.client.model.Client;
 
 @Controller
 public class ClientManager implements ClientController {
 
-    @Autowired
+	@Autowired
     private ClientDAO dao;
 
     @Override

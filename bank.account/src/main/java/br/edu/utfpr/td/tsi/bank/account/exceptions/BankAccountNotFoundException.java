@@ -5,7 +5,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "Was not possible to find an Object with the given data")
 public class BankAccountNotFoundException extends RuntimeException {
-    public BankAccountNotFoundException(){}
+
+	private static final long serialVersionUID = 1L;
+
+	public BankAccountNotFoundException(){}
 
     public BankAccountNotFoundException(String msg){
         super(msg);

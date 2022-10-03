@@ -4,9 +4,11 @@ import br.edu.utfpr.td.tsi.bank.client.model.Client;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface ClientDAO extends CrudRepository<Client, Integer> {
 
     @Query(value = "SELECT c FROM Client c WHERE c.cpf = ?1")

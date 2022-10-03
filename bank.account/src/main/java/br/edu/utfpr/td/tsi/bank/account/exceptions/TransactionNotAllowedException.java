@@ -5,7 +5,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(value = HttpStatus.NOT_ACCEPTABLE, reason = "The provided BankAccount isn't active. Please Verify")
 public class TransactionNotAllowedException extends RuntimeException {
-    public TransactionNotAllowedException(){}
+
+	private static final long serialVersionUID = 1L;
+
+	public TransactionNotAllowedException(){}
 
     public TransactionNotAllowedException(String msg){super(msg);}
 }

@@ -5,7 +5,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(value = HttpStatus.NOT_ACCEPTABLE, reason = "The given values are incorrect. Please Verify")
 public class BankLoanIllegalArgumentsException extends RuntimeException{
-    public BankLoanIllegalArgumentsException(){}
+
+	private static final long serialVersionUID = 1L;
+	
+	public BankLoanIllegalArgumentsException(){}
     public BankLoanIllegalArgumentsException(String msg){
         super(msg);
     }
