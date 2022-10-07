@@ -1,7 +1,0 @@
-br\edu\utfpr\td\tsi\bank\client\controller\ClientController.class
-br\edu\utfpr\td\tsi\bank\client\dao\ClientDAO.class
-br\edu\utfpr\td\tsi\bank\client\exception\ClientCPFCannotBeCreated.class
-br\edu\utfpr\td\tsi\bank\client\exception\ClientSalaryNotApplicable.class
-br\edu\utfpr\td\tsi\bank\client\exception\ClientNotFoundException.class
-br\edu\utfpr\td\tsi\bank\client\controller\ClientManager.class
-br\edu\utfpr\td\tsi\bank\client\model\Client.class
