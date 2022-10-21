@@ -25,7 +25,7 @@ public class BankAccountResources {
     private BankAccountManager mgr;
 
     @PostMapping(path = "/bank/account", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<BankAccount> openAccount(@Validated BankAccount item) {
+    public ResponseEntity<BankAccount> openAccount(@Validated @RequestBody BankAccount item) {
         BankAccount account = mgr.openAccount(item);
         return new ResponseEntity<>(account, HttpStatus.CREATED);
     }
