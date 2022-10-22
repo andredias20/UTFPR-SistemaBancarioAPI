@@ -5,12 +5,7 @@ import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
@@ -22,9 +17,10 @@ public class CreditCard implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @OneToOne(targetEntity = Client.class)
+    @OneToOne
     @NotBlank(message = "ClientID is mandatory")
-    private Integer clientID;
+    @JoinColumn(name = "client_id", referencedColumnName = "id")
+    private Client clientID;
     @NotBlank(message = "Card Holder is mandatory")
     private String cardHolder;
     @NotBlank(message = "Card number is mandatory")
@@ -44,11 +40,11 @@ public class CreditCard implements Serializable {
         this.id = id;
     }
 
-    public Integer getClientID() {
+    public Client getClientID() {
         return clientID;
     }
 
-    public void setClientID(Integer clientID) {
+    public void setClientID(Client clientID) {
         this.clientID = clientID;
     }
 

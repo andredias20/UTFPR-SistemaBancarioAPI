@@ -26,7 +26,7 @@ public class BankLoanManager implements BankLoanController {
 	@Override
     public BankLoan create(BankLoan item) {
         if(item == null) throw new RuntimeException("The BankLoan object can't be null");
-        Client client = clientManager.searchById(item.getClient());
+        Client client = clientManager.searchById(item.getClient().getId());
         if(client.getSalary() < 28800D){
             if(item != null)
 				return dao.save(item);

@@ -19,7 +19,7 @@ public class BankAccount implements Serializable {
 
     boolean active;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     Client client;
     Integer agency;

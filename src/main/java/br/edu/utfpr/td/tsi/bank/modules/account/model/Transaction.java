@@ -20,8 +20,9 @@ public class Transaction implements Serializable {
     private Integer id;
 
     @NotBlank
-    @OneToOne(targetEntity = Client.class)
-    private Integer client;
+    @ManyToOne
+    @JoinColumn(name = "client_id", referencedColumnName = "id")
+    private Client client;
     @Pattern(regexp = "\n{3}.\n{3}.\n{3}-\n{2}", message = "Value don't correspond to default value ###.###.###-##, where # is digits 0-9.")
     private String otherCPF;
     @NotBlank
@@ -67,11 +68,11 @@ public class Transaction implements Serializable {
         this.optionalMessage = msg;
     }
 
-    public Integer getClientId() {
+    public Client getClient() {
         return client;
     }
 
-    public void setClientId(Integer client) {
+    public void setClient(Client client) {
         this.client = client;
     }
 

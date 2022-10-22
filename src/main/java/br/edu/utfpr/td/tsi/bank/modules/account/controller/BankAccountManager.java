@@ -40,16 +40,16 @@ public class BankAccountManager implements BankAccountController {
 
     @Override
     public BankAccount updateAccount(BankAccount item) {
-        if(dao.existsById(item.getId())){
-            return dao.save(item);
-        }else {
-            throw new BankAccountNotFoundException();
-        }
+        BankAccount account = dao
+                .findById(item.getId())
+                .orElseThrow(BankAccountNotFoundException::new);
+
+        return dao.save(item);
     }
 
     @Override
     public Transaction transfer(Transaction item) {
-        item.getClientId();
+        item.getClient().getId();
         return transDao.save(item);
     }
 
