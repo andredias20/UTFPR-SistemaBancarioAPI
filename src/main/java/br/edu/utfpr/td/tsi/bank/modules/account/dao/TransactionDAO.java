@@ -1,11 +1,10 @@
 package br.edu.utfpr.td.tsi.bank.modules.account.dao;
 	
+import br.edu.utfpr.td.tsi.bank.modules.account.model.BankAccount;
 import br.edu.utfpr.td.tsi.bank.modules.account.model.Transaction;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-
-import br.edu.utfpr.td.tsi.bank.modules.account.model.Transaction;
 
 import java.util.Date;
 import java.util.List;
@@ -13,16 +12,13 @@ import java.util.List;
 @Repository
 public interface TransactionDAO extends CrudRepository<Transaction, Integer> {
 
-    @Query(value = "SELECT t FROM Transaction t")
-    List<Transaction> searchAll();
-
-    @Query(value = "SELECT sum(t.amountValue) FROM Transaction t WHERE t.client = ?1")
+    @Query(value = "SELECT sum(t.amountValue) FROM Transaction t WHERE t.account  = ?1")
     Double clientBalance(Integer id);
 
-    @Query(value = "SELECT t FROM Transaction t WHERE t.client = ?1")
-    List<Transaction> listTransactionsByClientId(Integer id);
+    @Query(value = "SELECT t FROM Transaction t WHERE t.account = ?1")
+    List<Transaction> listTransactionsByAccountId(BankAccount id);
 
-    @Query(value = "SELECT t FROM Transaction t WHERE t.client = ?1 AND t.createdAt BETWEEN ?2 AND ?3")
-    List<Transaction> listTransactionsByDate(Integer cliente_id, Date start, Date end);
+    @Query(value = "SELECT t FROM Transaction t WHERE t.account = ?1 AND t.createdAt BETWEEN ?2 AND ?3")
+    List<Transaction> listTransactionsByDate(BankAccount id, Date start, Date end);
 
 }

@@ -14,7 +14,6 @@ public class CustomErrorAtributes extends DefaultErrorAttributes {
     public Map<String, Object> getErrorAttributes(WebRequest webRequest, ErrorAttributeOptions options) {
 
         Map<String, Object> errorAttributes = super.getErrorAttributes(webRequest, options);
-
         errorAttributes.remove("trace");
 
         return errorAttributes;

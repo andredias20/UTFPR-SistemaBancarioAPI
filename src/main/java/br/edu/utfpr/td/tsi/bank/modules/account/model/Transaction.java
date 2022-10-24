@@ -3,9 +3,11 @@ package br.edu.utfpr.td.tsi.bank.modules.account.model;
 import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.util.Date;
@@ -16,20 +18,21 @@ public class Transaction implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @NotBlank
+    @NotNull(message = "account_id is needed")
     @ManyToOne
-    @JoinColumn(name = "client_id", referencedColumnName = "id")
-    private Client client;
-    @Pattern(regexp = "\n{3}.\n{3}.\n{3}-\n{2}", message = "Value don't correspond to default value ###.###.###-##, where # is digits 0-9.")
+    @JoinColumn(name = "account_id", referencedColumnName = "id")
+    private BankAccount account;
+    @NotBlank(message = "Data from Destination account is needed (CPF is empty)")
+    @CPF
     private String otherCPF;
-    @NotBlank
+    @NotNull(message = "Data from Destination account is needed (Account  Destination is empty)")
     private Long destAccountNumber;
-    @NotBlank
+    @NotNull(message = "Data from Destination account is needed (Account Agency is empty)")
     private Short destAgencyNumber;
-    @NotBlank
+    @NotNull(message = "Amount is mandatory")
     private Double amountValue;
     private String optionalMessage;
 
@@ -68,12 +71,12 @@ public class Transaction implements Serializable {
         this.optionalMessage = msg;
     }
 
-    public Client getClient() {
-        return client;
+    public BankAccount getAccount() {
+        return account;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
+    public void setAccount(BankAccount account) {
+        this.account = account;
     }
 
     public String getOtherCPF() {

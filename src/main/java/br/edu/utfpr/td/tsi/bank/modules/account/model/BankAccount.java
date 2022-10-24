@@ -24,8 +24,14 @@ public class BankAccount implements Serializable {
     Client client;
     Integer agency;
     Long accountNumber;
+    @Basic(fetch = FetchType.LAZY, optional = false)
     Integer password;
+
     public BankAccount() { }
+
+    public BankAccount(Integer id){
+        this.id = id;
+    }
 
     public Integer getId() {
         return id;
