@@ -1,4 +1,4 @@
-package br.edu.utfpr.td.tsi.bank.client.exception;
+package br.edu.utfpr.td.tsi.bank.modules.client.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

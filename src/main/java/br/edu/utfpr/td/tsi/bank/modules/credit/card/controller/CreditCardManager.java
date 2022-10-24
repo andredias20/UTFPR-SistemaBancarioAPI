@@ -1,19 +1,23 @@
 package br.edu.utfpr.td.tsi.bank.modules.credit.card.controller;
 
-import br.edu.utfpr.td.tsi.bank.credit.card.exception.CreditCardInvalidArgumentsException;
-import br.edu.utfpr.td.tsi.bank.credit.card.exception.CreditCardNotFoundException;
-import br.edu.utfpr.td.tsi.bank.modules.credit.card.dao.CreditCardDAO;
-import br.edu.utfpr.td.tsi.bank.modules.credit.card.model.CreditCard;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import java.util.List;
+import br.edu.utfpr.td.tsi.bank.modules.client.controller.ClientManager;
+import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
+import br.edu.utfpr.td.tsi.bank.modules.credit.card.dao.CreditCardDAO;
+import br.edu.utfpr.td.tsi.bank.modules.credit.card.exception.CreditCardCreationNotAllowed;
+import br.edu.utfpr.td.tsi.bank.modules.credit.card.exception.CreditCardNotFoundException;
+import br.edu.utfpr.td.tsi.bank.modules.credit.card.model.CreditCard;
 
 @Controller
 public class CreditCardManager implements CreditCardController {
 
-    @Autowired
-    private CreditCardDAO dao;
+    @Autowired private CreditCardDAO dao;
+    
+    @Autowired private ClientManager cliMgr;
 
     @Override
     public List<CreditCard> listAll() {
@@ -22,25 +26,40 @@ public class CreditCardManager implements CreditCardController {
 
     @Override
     public CreditCard listById(Integer id) {
-        return dao.findById(id).orElseThrow(CreditCardNotFoundException::new);
+        return dao.findById(id)
+        		.orElseThrow(CreditCardNotFoundException::new);
     }
 
     @Override
     public CreditCard create(CreditCard item) {
-        if(item != null) return dao.save(item);
-        else throw new CreditCardInvalidArgumentsException();
+        cliMgr.searchById(item.getClient_id().getId());
+        var credit = dao
+        		.existByClientId(new Client(item.getClient_id().getId()));
+        if(credit != null) {
+        	throw new CreditCardCreationNotAllowed();
+        }
+    	return dao.save(item);
     }
 
     @Override
     public void delete(Integer id) {
-        dao.findById(id).orElseThrow(CreditCardNotFoundException::new);
+        dao.findById(id)
+        	.orElseThrow(CreditCardNotFoundException::new);
         dao.deleteById(id);
     }
 
     @Override
     public CreditCard update(CreditCard item, Integer id) {
         item.setId(id);
-        dao.findById(id).orElseThrow();
+        dao.findById(id)
+        	.orElseThrow(CreditCardNotFoundException::new);
         return dao.save(item);
     }
+
+	@Override
+	public CreditCard listByClientId(Integer id){
+		var list = dao.findByClientId(new Client(id))
+				.orElseThrow(CreditCardNotFoundException::new);
+		return list;
+	}
 }

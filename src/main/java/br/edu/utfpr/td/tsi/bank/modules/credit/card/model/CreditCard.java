@@ -1,12 +1,21 @@
 package br.edu.utfpr.td.tsi.bank.modules.credit.card.model;
 
-import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
-
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
+import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
 
 @Entity
 @Table(name = "credit_card")
@@ -17,17 +26,21 @@ public class CreditCard implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @OneToOne
-    @NotBlank(message = "ClientID is mandatory")
+    
+	@OneToOne
+	@NotNull(message = "client_id is mandatory")
     @JoinColumn(name = "client_id", referencedColumnName = "id")
-    private Client clientID;
-    @NotBlank(message = "Card Holder is mandatory")
+    private Client client_id;
+    
+	@NotNull(message = "Card Holder is mandatory")
     private String cardHolder;
-    @NotBlank(message = "Card number is mandatory")
+	@NotNull(message = "Card number is mandatory")
     private Long cardNumber;
-    @NotBlank(message = "ValidThru is mandatory")
+	
+	@NotNull(message = "ValidThru is mandatory")
+	@DateTimeFormat(iso = ISO.DATE)
     private Date validThru;
-    @NotBlank(message = "Security code is mandatory")
+	@NotNull(message = "Security code is mandatory")
     private Short securityCode;
 
     public CreditCard() {}
@@ -40,12 +53,12 @@ public class CreditCard implements Serializable {
         this.id = id;
     }
 
-    public Client getClientID() {
-        return clientID;
+    public Client getClient_id() {
+        return client_id;
     }
 
-    public void setClientID(Client clientID) {
-        this.clientID = clientID;
+    public void setClient_id(Client client_id) {
+        this.client_id = client_id;
     }
 
     public String getCardHolder() {

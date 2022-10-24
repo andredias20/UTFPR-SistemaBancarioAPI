@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import br.edu.utfpr.td.tsi.bank.modules.client.dao.ClientDAO;
-import br.edu.utfpr.td.tsi.bank.client.exception.ClientNotFoundException;
-import br.edu.utfpr.td.tsi.bank.client.exception.ClientSalaryNotApplicable;
+import br.edu.utfpr.td.tsi.bank.modules.client.exception.ClientNotFoundException;
+import br.edu.utfpr.td.tsi.bank.modules.client.exception.ClientSalaryNotApplicable;
 
 @Controller
 public class ClientManager implements ClientController {
@@ -19,7 +19,7 @@ public class ClientManager implements ClientController {
     private ClientDAO dao;
 
     @Override
-    public Client create(Client item) throws ClientCPFCannotBeCreated {
+    public Client create(Client item) {
         if (dao.searchClientByCpfEquals(item.getCpf()) != null) throw new ClientCPFCannotBeCreated();
         if (item.getSalary() > 1200D) {
             item.setId(dao.save(item).getId());
@@ -34,26 +34,26 @@ public class ClientManager implements ClientController {
     }
 
     @Override
-    public void delete(Integer id) throws ClientNotFoundException {
+    public void delete(Integer id){
         dao.findById(id).orElseThrow(ClientNotFoundException::new);
         dao.deleteById(id);
     }
 
     @Override
-    public Client searchById(Integer id) throws RuntimeException {
+    public Client searchById(Integer id) {
         if(id == null) throw new ClientCantBeNull();
         return dao.findById(id).orElseThrow(ClientNotFoundException::new);
     }
 
     @Override
-    public Client searchByCPF(String cpf) throws ClientNotFoundException{
+    public Client searchByCPF(String cpf) {
         Client client = dao.searchClientByCpfEquals(cpf);
         if (client == null) throw new ClientNotFoundException();
         return client;
     }
 
     @Override
-    public List<Client> searchByName(String name) throws ClientNotFoundException{
+    public List<Client> searchByName(String name){
         List<Client> client = dao.searchClientsByName(name);
         if (client == null) throw new ClientNotFoundException();
         return client;

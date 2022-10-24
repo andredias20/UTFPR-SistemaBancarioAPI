@@ -1,14 +1,15 @@
 package br.edu.utfpr.td.tsi.bank.modules.credit.card.controller;
 
-import br.edu.utfpr.td.tsi.bank.modules.credit.card.model.CreditCard;
-
 import java.util.List;
 
+import br.edu.utfpr.td.tsi.bank.modules.credit.card.model.CreditCard;
+
 public interface CreditCardController {
-    List<CreditCard> listAll();
-    CreditCard listById(Integer id);
-    CreditCard create(CreditCard item);
+    List<CreditCard> listAll() throws RuntimeException;
+    CreditCard listById(Integer id) throws RuntimeException;
+    CreditCard listByClientId(Integer id) throws RuntimeException;
+    CreditCard create(CreditCard item) throws RuntimeException;
     void delete(Integer id);
-    CreditCard update(CreditCard item, Integer id);
+    CreditCard update(CreditCard item, Integer id) throws RuntimeException;
 
 }

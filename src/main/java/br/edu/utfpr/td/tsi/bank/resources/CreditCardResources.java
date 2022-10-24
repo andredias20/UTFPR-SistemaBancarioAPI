@@ -15,6 +15,7 @@ public class CreditCardResources {
 
     @Autowired
     CreditCardController mgr;
+    
     @GetMapping(path = "bank/credit-card")
     public ResponseEntity<List<CreditCard>> listAll() {
         List<CreditCard> cards = mgr.listAll();
@@ -26,9 +27,15 @@ public class CreditCardResources {
         CreditCard card = mgr.listById(id);
         return new ResponseEntity<>(card, HttpStatus.OK);
     }
+    
+    @GetMapping(path = "bank/credit-card", params = "client_id")
+    public ResponseEntity<CreditCard> listByClientId(@RequestParam(name = "client_id") Integer id){
+    	CreditCard card = mgr.listByClientId(id);
+    	return new ResponseEntity<>(card, HttpStatus.OK);
+    }
 
     @PostMapping(value = "/bank/credit-card")
-    public ResponseEntity<CreditCard> create(@Validated CreditCard item) {
+    public ResponseEntity<CreditCard> create(@Validated @RequestBody CreditCard item) {
         CreditCard card = mgr.create(item);
         return new ResponseEntity<>(card, HttpStatus.CREATED);
     }
@@ -40,7 +47,7 @@ public class CreditCardResources {
     }
 
     @PutMapping(path = "/bank/credit-card", params = "id")
-    public ResponseEntity<CreditCard> update(@Validated CreditCard item, @RequestParam Integer id) {
+    public ResponseEntity<CreditCard> update(@RequestBody @Validated CreditCard item, @RequestParam Integer id) {
         CreditCard card = mgr.update(item, id);
         return new ResponseEntity<>(card, HttpStatus.ACCEPTED);
     }

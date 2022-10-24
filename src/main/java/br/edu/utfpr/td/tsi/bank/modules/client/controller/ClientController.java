@@ -1,19 +1,17 @@
 package br.edu.utfpr.td.tsi.bank.modules.client.controller;
 
-import br.edu.utfpr.td.tsi.bank.client.exception.ClientNotFoundException;
-import br.edu.utfpr.td.tsi.bank.modules.client.exception.ClientCPFCannotBeCreated;
-import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
-
 import java.util.List;
+
+import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
 
 public interface ClientController {
 
-    Client create(Client item) throws ClientCPFCannotBeCreated;
-    void update(Client item) throws ClientNotFoundException;
-    void delete(Integer id) throws ClientNotFoundException;
-    Client searchById(Integer id) throws ClientNotFoundException;
-    Client searchByCPF(String cpf) throws ClientNotFoundException;
-    List<Client> searchByName(String name) throws ClientNotFoundException;
+    Client create(Client item) throws RuntimeException;
+    void update(Client item) throws RuntimeException;
+    void delete(Integer id) throws RuntimeException;
+    Client searchById(Integer id) throws RuntimeException;
+    Client searchByCPF(String cpf) throws RuntimeException;
+    List<Client> searchByName(String name) throws RuntimeException;
     List<Client> searchAll();
 
 }

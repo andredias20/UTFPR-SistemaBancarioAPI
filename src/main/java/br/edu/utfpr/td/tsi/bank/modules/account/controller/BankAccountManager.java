@@ -40,8 +40,7 @@ public class BankAccountManager implements BankAccountController {
 
     @Override
     public BankAccount updateAccount(BankAccount item) {
-        BankAccount account = dao
-                .findById(item.getId())
+        dao.findById(item.getId())
                 .orElseThrow(BankAccountNotFoundException::new);
 
         return dao.save(item);

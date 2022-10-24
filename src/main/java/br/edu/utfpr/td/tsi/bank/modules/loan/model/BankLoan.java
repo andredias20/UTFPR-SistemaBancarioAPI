@@ -2,11 +2,17 @@ package br.edu.utfpr.td.tsi.bank.modules.loan.model;
 
 import java.io.Serializable;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import org.hibernate.validator.constraints.Range;
 
 import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
-import org.hibernate.annotations.Parameter;
-import org.hibernate.validator.constraints.Range;
 
 @Entity
 @Table(name = "loan")

@@ -1,4 +1,4 @@
-package br.edu.utfpr.td.tsi.bank.credit.card.exception;
+package br.edu.utfpr.td.tsi.bank.modules.credit.card.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -2,7 +2,6 @@ package br.edu.utfpr.td.tsi.bank.modules.loan.controller;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -13,7 +12,6 @@ import br.edu.utfpr.td.tsi.bank.modules.loan.exception.BankLoanIllegalArgumentsE
 import br.edu.utfpr.td.tsi.bank.modules.loan.exception.BankLoanNotEnoughSalaryException;
 import br.edu.utfpr.td.tsi.bank.modules.loan.exception.BankLoanNotFoundException;
 import br.edu.utfpr.td.tsi.bank.modules.loan.model.BankLoan;
-import br.edu.utfpr.td.tsi.bank.modules.loan.controller.BankLoanController;
 
 @Controller
 public class BankLoanManager implements BankLoanController {

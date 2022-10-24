@@ -1,24 +1,12 @@
 package br.edu.utfpr.td.tsi.bank.resources;
 
-import java.lang.reflect.Type;
 import java.util.Date;
 import java.util.List;
 
-import br.edu.utfpr.td.tsi.bank.modules.account.controller.BankAccountManager;
-import br.edu.utfpr.td.tsi.bank.modules.account.model.BankAccount;
-import br.edu.utfpr.td.tsi.bank.modules.account.model.Transaction;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.fasterxml.jackson.databind.util.JSONWrappedObject;
-import org.h2.util.json.JSONObject;
-import org.h2.util.json.JSONValue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +14,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import br.edu.utfpr.td.tsi.bank.modules.account.controller.BankAccountManager;
+import br.edu.utfpr.td.tsi.bank.modules.account.model.BankAccount;
+import br.edu.utfpr.td.tsi.bank.modules.account.model.Transaction;
 
 
 @RestController
