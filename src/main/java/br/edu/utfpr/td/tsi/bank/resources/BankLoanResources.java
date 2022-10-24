@@ -30,15 +30,14 @@ public class BankLoanResources {
 
 
     @PutMapping(path = "/bank/loan", params = "id")
-    public ResponseEntity<BankLoan> update(@RequestBody BankLoan item, @RequestParam Integer id) {
-        item.setId(id);
-        BankLoan loan = mgr.create(item);
+    public ResponseEntity<BankLoan> update(@RequestBody BankLoan item, @RequestParam(name = "id") Integer id) {
+        BankLoan loan = mgr.update(item, id);
         return new ResponseEntity<>(loan, HttpStatus.ACCEPTED);
     }
 
 
     @DeleteMapping(path = "/bank/loan", params = "id")
-    public ResponseEntity<BankLoan> delete(@RequestParam Integer id) {
+    public ResponseEntity<BankLoan> delete(@RequestParam(name = "id") Integer id) {
         mgr.delete(id);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
@@ -50,8 +49,13 @@ public class BankLoanResources {
     }
 
     @GetMapping(path = "/bank/loan", params = "id")
-    public ResponseEntity<BankLoan> listById(@RequestParam Integer id) {
+    public ResponseEntity<BankLoan> listById(@RequestParam(name = "id") Integer id) {
         BankLoan loan = mgr.listById(id);
+        return new ResponseEntity<>(loan, HttpStatus.OK);
+    }
+    @GetMapping(path = "/bank/loan", params = "client_id")
+    public ResponseEntity<List<BankLoan>> listByClientId(@RequestParam(name = "client_id") Integer id) {
+        List<BankLoan> loan = mgr.listLoansByClientId(id);
         return new ResponseEntity<>(loan, HttpStatus.OK);
     }
 }

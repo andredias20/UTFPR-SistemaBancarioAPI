@@ -13,7 +13,7 @@ import java.util.List;
 public interface TransactionDAO extends CrudRepository<Transaction, Integer> {
 
     @Query(value = "SELECT sum(t.amountValue) FROM Transaction t WHERE t.account  = ?1")
-    Double clientBalance(Integer id);
+    Double clientBalance(BankAccount id);
 
     @Query(value = "SELECT t FROM Transaction t WHERE t.account = ?1")
     List<Transaction> listTransactionsByAccountId(BankAccount id);

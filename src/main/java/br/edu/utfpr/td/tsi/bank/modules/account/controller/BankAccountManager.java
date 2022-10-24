@@ -56,7 +56,7 @@ public class BankAccountManager implements BankAccountController {
 
     @Override
     public Double balance(Integer clientID) {
-        return transDao.clientBalance(clientID);
+        return transDao.clientBalance(new BankAccount(clientID));
     }
 
     @Override

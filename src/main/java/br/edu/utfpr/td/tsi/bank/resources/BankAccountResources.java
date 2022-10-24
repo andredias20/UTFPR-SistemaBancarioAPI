@@ -8,6 +8,12 @@ import br.edu.utfpr.td.tsi.bank.modules.account.controller.BankAccountManager;
 import br.edu.utfpr.td.tsi.bank.modules.account.model.BankAccount;
 import br.edu.utfpr.td.tsi.bank.modules.account.model.Transaction;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.fasterxml.jackson.databind.util.JSONWrappedObject;
+import org.h2.util.json.JSONObject;
+import org.h2.util.json.JSONValue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -58,9 +64,12 @@ public class BankAccountResources {
         return new ResponseEntity<>(transaction, HttpStatus.CREATED);
     }
     @GetMapping(path = "/bank/account/balance", params = "account_id")
-    public ResponseEntity<Double> balance(@RequestParam(name = "account_id") Integer id) {
+    public ResponseEntity<ObjectNode> balance(@RequestParam(name = "account_id") Integer id) {
         Double balance = mgr.balance(id);
-        return new ResponseEntity<>(balance, HttpStatus.OK);
+        ObjectMapper creator = new ObjectMapper();
+        ObjectNode json = creator.createObjectNode();
+        json.put("balance", balance);
+        return new ResponseEntity<>(json, HttpStatus.OK);
     }
 
     @GetMapping(path = "/bank/account/transaction")

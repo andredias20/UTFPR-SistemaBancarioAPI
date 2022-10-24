@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
 import org.hibernate.annotations.Parameter;
+import org.hibernate.validator.constraints.Range;
 
 @Entity
 @Table(name = "loan")
@@ -20,7 +21,9 @@ public class BankLoan implements Serializable {
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client;
     private Long loanValue;
+    @Range(min = 0)
     private Integer monthsForPayment;
+    @Range(min = 0, max = 100, message = "Tax Percentage needs to be from 0 to 100")
     private Double taxPercentage;
 
     public BankLoan() {
