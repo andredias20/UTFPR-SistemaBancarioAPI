@@ -24,7 +24,7 @@ import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType;
 
 @JsonldResource
 @JsonldNamespace(name = "s", uri = "http://schema.org/")
-@JsonldType("s:CreditCard")
+@JsonldType("s:MonetaryAmount")
 @Entity
 @Table(name = "credit_card")
 public class CreditCard implements Serializable {
@@ -41,9 +41,11 @@ public class CreditCard implements Serializable {
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client_id;
     
+    @JsonldProperty("s:")
 	@NotNull(message = "Card Holder is mandatory")
     private String cardHolder;
 	
+    @JsonldProperty("s:")
     @NotNull(message = "Card number is mandatory")
     private Long cardNumber;
 	
