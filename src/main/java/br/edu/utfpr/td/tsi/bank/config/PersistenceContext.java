@@ -53,7 +53,7 @@ public class PersistenceContext {
 		return dataSource;
 	}
 
-	@Bean
+/*	@Bean
 	public DataSourceInitializer dataSourceInitializer() {
 		ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
 		resourceDatabasePopulator.addScript(new ClassPathResource("migration.sql"));
@@ -63,5 +63,5 @@ public class PersistenceContext {
 		dataSourceInitializer.setDatabasePopulator(resourceDatabasePopulator);
 		return dataSourceInitializer;
 	}
-
+*/
 }

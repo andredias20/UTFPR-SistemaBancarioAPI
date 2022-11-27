@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bank.main" />
+        <module name="UTFPR-SistemaBancarioAPI" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="UTFPR-SistemaBancarioAPI" options="-parameters" />
       <module name="bank.account" options="-parameters" />
       <module name="bank.client" options="-parameters" />
       <module name="bank.credit-card" options="-parameters" />

@@ -11,8 +11,9 @@ import org.springframework.stereotype.Controller;
 import br.edu.utfpr.td.tsi.bank.modules.client.dao.ClientDAO;
 import br.edu.utfpr.td.tsi.bank.modules.client.exception.ClientNotFoundException;
 import br.edu.utfpr.td.tsi.bank.modules.client.exception.ClientSalaryNotApplicable;
+import org.springframework.stereotype.Service;
 
-@Controller
+@Service
 public class ClientManager implements ClientController {
 
 	@Autowired

@@ -16,7 +16,15 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldNamespace;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldResource;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType;
 
+@JsonldResource
+@JsonldNamespace(name = "s", uri = "http://schema.org/")
+@JsonldType("s:CreditCard")
 @Entity
 @Table(name = "credit_card")
 public class CreditCard implements Serializable {
@@ -25,21 +33,26 @@ public class CreditCard implements Serializable {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonldId
     private Integer id;
     
-	@OneToOne
+    @OneToOne
 	@NotNull(message = "client_id is mandatory")
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client_id;
     
 	@NotNull(message = "Card Holder is mandatory")
     private String cardHolder;
-	@NotNull(message = "Card number is mandatory")
+	
+    @NotNull(message = "Card number is mandatory")
     private Long cardNumber;
 	
+    @JsonldProperty("s:validThrough")
 	@NotNull(message = "ValidThru is mandatory")
 	@DateTimeFormat(iso = ISO.DATE)
     private Date validThru;
+    
+
 	@NotNull(message = "Security code is mandatory")
     private Short securityCode;
 

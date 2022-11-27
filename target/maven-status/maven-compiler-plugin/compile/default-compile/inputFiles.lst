@@ -1,37 +1,39 @@
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\exception\ClientCantBeNull.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\exception\ClientSalaryNotApplicable.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\exception\ClientNotFoundException.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\resources\CreditCardResources.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\model\BankAccount.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\exception\CreditCardNotFoundException.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\model\Client.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\exceptions\BankAccountNotAllowedException.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\BankApplication.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\resources\BankAccountResources.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\controller\BankAccountManager.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\dao\BankAccountDAO.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\model\CustomErrorAtributes.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\controller\CreditCardController.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\exceptions\TransactionNotAllowedException.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\dao\CreditCardDAO.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\dao\BankLoanDAO.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\controller\BankAccountController.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\exception\CreditCardInvalidArgumentsException.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\exception\BankLoanNotEnoughSalaryException.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\dao\TransactionDAO.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\dao\ClientDAO.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\controller\BankLoanManager.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\model\CreditCard.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\controller\BankLoanController.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\exception\BankLoanNotFoundException.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\config\PersistenceContext.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\controller\CreditCardManager.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\resources\ClientResources.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\exceptions\BankAccountNotFoundException.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\model\Transaction.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\exception\BankLoanIllegalArgumentsException.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\controller\ClientManager.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\model\BankLoan.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\resources\BankLoanResources.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\controller\ClientController.java
-D:\Desenvolvimento\dev\Workspaces\Eclipse - Workspace\sistema-bancario-v2\sistema.bancario\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\exception\ClientCPFCannotBeCreated.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\exception\BankLoanNotFoundException.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\resources\BankLoanResources.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\dao\BankAccountDAO.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\model\Client.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\resources\BankAccountResources.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\model\Transaction.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\controller\BankLoanManager.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\dao\BankLoanDAO.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\controller\CreditCardManager.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\exception\CreditCardNotFoundException.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\exceptions\BankAccountNotAllowedException.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\resources\CreditCardResources.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\exception\CreditCardUpdateNotAllowed.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\config\PersistenceContext.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\model\BankAccount.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\dao\ClientDAO.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\exception\CreditCardInvalidArgumentsException.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\model\BankLoan.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\controller\BankAccountController.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\exception\CreditCardCreationNotAllowed.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\BankApplication.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\exceptions\BankAccountNotFoundException.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\controller\BankLoanController.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\dao\TransactionDAO.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\controller\ClientController.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\controller\BankAccountManager.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\resources\ClientResources.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\exception\ClientNotFoundException.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\exception\BankLoanNotEnoughSalaryException.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\exception\ClientCPFCannotBeCreated.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\model\CustomErrorAtributes.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\controller\CreditCardController.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\exception\ClientSalaryNotApplicable.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\dao\CreditCardDAO.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\exception\ClientCantBeNull.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\account\exceptions\TransactionNotAllowedException.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\loan\exception\BankLoanIllegalArgumentsException.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\credit\card\model\CreditCard.java
+C:\dev\UTFPR-SistemaBancarioAPI\src\main\java\br\edu\utfpr\td\tsi\bank\modules\client\controller\ClientManager.java
