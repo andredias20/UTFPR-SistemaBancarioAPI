@@ -3,9 +3,18 @@ package br.edu.utfpr.td.tsi.bank.modules.account.model;
 
 
 import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldNamespace;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldResource;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+@JsonldResource
+@JsonldNamespace(name = "s", uri = "http://schema.org/")
+@JsonldType("s:Text")
 
 @Entity
 @Table(name = "bank_account")
@@ -15,6 +24,7 @@ public class BankAccount implements Serializable {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonldId
     Integer id;
 
     boolean active;
@@ -22,8 +32,12 @@ public class BankAccount implements Serializable {
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     Client client;
+
     Integer agency;
+    @JsonldProperty("s:accountId")
     Long accountNumber;
+
+    @JsonldProperty("s:")//FAULT
     @Basic(fetch = FetchType.LAZY, optional = false)
     Integer password;
 
