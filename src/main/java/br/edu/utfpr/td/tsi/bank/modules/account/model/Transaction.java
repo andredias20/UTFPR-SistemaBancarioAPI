@@ -17,6 +17,14 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.validator.constraints.br.CPF;
 
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldNamespace;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldResource;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType;
+@JsonldResource
+@JsonldNamespace(name = "s", uri = "http://www.semanticweb.org/andre/ontologies/2022/10/BankAccount")
+@JsonldType("s:Transaction")
 @Entity	
 public class Transaction implements Serializable {
 
@@ -24,27 +32,42 @@ public class Transaction implements Serializable {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonldId
     private Integer id;
 
     @NotNull(message = "account_id is needed")
     @ManyToOne
     @JoinColumn(name = "account_id", referencedColumnName = "id")
+    @JsonldProperty("s:accountID")
     private BankAccount account;
+    
+    
     @NotBlank(message = "Data from Destination account is needed (CPF is empty)")
     @CPF
+    @JsonldProperty("s:otherCPF")
     private String otherCPF;
+    
     @NotNull(message = "Data from Destination account is needed (Account  Destination is empty)")
+    @JsonldProperty("s:destAccountNumber")
     private Long destAccountNumber;
+    
+    @JsonldProperty("s:destAgencyNumber")
     @NotNull(message = "Data from Destination account is needed (Account Agency is empty)")
     private Short destAgencyNumber;
+    
+    @JsonldProperty("s:amountValue")
     @NotNull(message = "Amount is mandatory")
     private Double amountValue;
+    
+    @JsonldProperty("s:optionalMessage")
     private String optionalMessage;
 
+    @JsonldProperty("s:lastTouched")
     @Column(insertable = false, updatable = false)
     @UpdateTimestamp
     private Date lastTouched;
 
+    @JsonldProperty("s:createdAt")
     @Column(nullable = false, updatable = false)
     @CreationTimestamp
     private Date createdAt;

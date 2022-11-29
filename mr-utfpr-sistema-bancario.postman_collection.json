@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "235817e0-693c-4a89-8163-2435606321ad",
+		"_postman_id": "59ff5d2f-0eb2-45e9-bbba-376387b3469b",
 		"name": "mr-utfpr-sistema-bancario",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21086129"
 	},
 	"item": [
 		{
@@ -33,7 +34,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/client?cpf=093.000.000-00",
+							"raw": "http://localhost:8080/client?cpf=754.954.736-04",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -45,7 +46,7 @@
 							"query": [
 								{
 									"key": "cpf",
-									"value": "093.000.000-00"
+									"value": "754.954.736-04"
 								}
 							]
 						}
@@ -58,7 +59,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/client?name=Andre de Carli Dias",
+							"raw": "http://localhost:8080/client?name=Hadassa",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -70,7 +71,7 @@
 							"query": [
 								{
 									"key": "name",
-									"value": "Andre de Carli Dias"
+									"value": "Hadassa"
 								}
 							]
 						}
@@ -84,7 +85,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \"name\": \"Andre De Carli Dias\",\r\n        \"cpf\": \"093.000.000-00\",\r\n        \"birthDate\": \"2000-05-04\",\r\n        \"email\": \"andre@gmail.com\",\r\n        \"phone\": \"45 99833-8540\",\r\n        \"salary\": 40000.0\r\n    }",
+							"raw": "    {\r\n        \"first_name\": \"Andre\",\r\n        \"last_name\": \"De Carli Dias\",\r\n        \"cpf\": \"093.732.719-03\",\r\n        \"birthDate\": \"2000-05-04\",\r\n        \"email\": \"andre@gmail.com\",\r\n        \"phone\": \"45 99833-8540\",\r\n        \"salary\": 40000.0\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -161,6 +162,14 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
@@ -383,12 +392,12 @@
 					"response": []
 				},
 				{
-					"name": "Get Loan By Client Id",
+					"name": "Get CreditCard By Client Id",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/bank/loan?client_id=1",
+							"raw": "http://localhost:8080/bank/credit-card?client_id=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -396,7 +405,7 @@
 							"port": "8080",
 							"path": [
 								"bank",
-								"loan"
+								"credit-card"
 							],
 							"query": [
 								{
@@ -415,7 +424,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"client\": 1,\r\n    \"loanValue\": 1000000.00,\r\n    \"taxPercentage\": 8,\r\n    \"monthsForPayment\": 12\r\n}",
+							"raw": "{\r\n    \"client_id\" : 1,\r\n    \"cardHolder\" : \"Jesus Cristo\",\r\n    \"cardNumber\" : 12345435436534642,\r\n    \"validThru\" : \"2024-04-01\",\r\n    \"securityCode\" : 132 \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -423,7 +432,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/bank/loan",
+							"raw": "http://localhost:8080/bank/credit-card",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -431,7 +440,7 @@
 							"port": "8080",
 							"path": [
 								"bank",
-								"loan"
+								"credit-card"
 							]
 						}
 					},
@@ -444,7 +453,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"client\": 1,\r\n    \"loanValue\": 20000.00,\r\n    \"taxPercentage\": 8,\r\n    \"monthsForPayment\": 12\r\n}",
+							"raw": "{\r\n    \"client_id\" : 1,\r\n    \"cardHolder\" : \"Deus senhor\",\r\n    \"cardNumber\" : 12345435436534642,\r\n    \"validThru\" : \"2024-04-01\",\r\n    \"securityCode\" : 132 \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -452,7 +461,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/bank/loan?id=1",
+							"raw": "http://localhost:8080/bank/credit-card?id=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -460,7 +469,7 @@
 							"port": "8080",
 							"path": [
 								"bank",
-								"loan"
+								"credit-card"
 							],
 							"query": [
 								{
@@ -478,7 +487,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/bank/loan?id=1",
+							"raw": "http://localhost:8080/bank/credit-card?id=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -486,7 +495,7 @@
 							"port": "8080",
 							"path": [
 								"bank",
-								"loan"
+								"credit-card"
 							],
 							"query": [
 								{

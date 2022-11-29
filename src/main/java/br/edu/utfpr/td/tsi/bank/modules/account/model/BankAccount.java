@@ -13,9 +13,8 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @JsonldResource
-@JsonldNamespace(name = "s", uri = "http://schema.org/")
-@JsonldType("s:Text")
-
+@JsonldNamespace(name = "s", uri = "http://www.semanticweb.org/andre/ontologies/2022/10/BankAccount")
+@JsonldType("s:Account")
 @Entity
 @Table(name = "bank_account")
 public class BankAccount implements Serializable {
@@ -27,17 +26,20 @@ public class BankAccount implements Serializable {
     @JsonldId
     Integer id;
 
+    @JsonldProperty("s:accountActive")
     boolean active;
 
+    @JsonldProperty("s:clientID")
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     Client client;
 
+    @JsonldProperty("s:accountAgency")
     Integer agency;
-    @JsonldProperty("s:accountId")
+    @JsonldProperty("s:accountNumber")
     Long accountNumber;
 
-    @JsonldProperty("s:")//FAULT
+    @JsonldProperty("s:accountPassword")
     @Basic(fetch = FetchType.LAZY, optional = false)
     Integer password;
 

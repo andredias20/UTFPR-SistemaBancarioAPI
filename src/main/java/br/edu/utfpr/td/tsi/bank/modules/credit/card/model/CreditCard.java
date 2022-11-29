@@ -23,8 +23,8 @@ import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldResource;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType;
 
 @JsonldResource
-@JsonldNamespace(name = "s", uri = "http://schema.org/")
-@JsonldType("s:MonetaryAmount")
+@JsonldNamespace(name = "s", uri = "http://www.semanticweb.org/andre/ontologies/2022/10/BankAccount")
+@JsonldType("s:CreditCardAccount")
 @Entity
 @Table(name = "credit_card")
 public class CreditCard implements Serializable {
@@ -36,16 +36,17 @@ public class CreditCard implements Serializable {
     @JsonldId
     private Integer id;
     
+    @JsonldProperty("s:clientID")
     @OneToOne
 	@NotNull(message = "client_id is mandatory")
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client_id;
     
-    @JsonldProperty("s:")
+    @JsonldProperty("s:cardHolder")
 	@NotNull(message = "Card Holder is mandatory")
     private String cardHolder;
 	
-    @JsonldProperty("s:")
+    @JsonldProperty("s:cardNumber")
     @NotNull(message = "Card number is mandatory")
     private Long cardNumber;
 	
@@ -54,7 +55,7 @@ public class CreditCard implements Serializable {
 	@DateTimeFormat(iso = ISO.DATE)
     private Date validThru;
     
-
+    @JsonldProperty("s:securityCode")
 	@NotNull(message = "Security code is mandatory")
     private Short securityCode;
 
