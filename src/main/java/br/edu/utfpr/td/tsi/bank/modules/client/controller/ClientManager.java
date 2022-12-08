@@ -53,8 +53,8 @@ public class ClientManager implements ClientController {
     }
 
     @Override
-    public List<Client> searchByName(String name){
-        List<Client> client = dao.searchClientsByName(name);
+    public List<Client> searchByEmail(String email){
+        List<Client> client = dao.searchClientsByEmail(email);
         if (client == null) throw new ClientNotFoundException();
         return client;
     }

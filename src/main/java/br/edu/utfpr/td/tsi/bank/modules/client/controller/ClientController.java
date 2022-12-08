@@ -11,7 +11,7 @@ public interface ClientController {
     void delete(Integer id) throws RuntimeException;
     Client searchById(Integer id) throws RuntimeException;
     Client searchByCPF(String cpf) throws RuntimeException;
-    List<Client> searchByName(String name) throws RuntimeException;
+    List<Client> searchByEmail(String email) throws RuntimeException;
     List<Client> searchAll();
 
 }

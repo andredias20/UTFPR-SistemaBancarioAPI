@@ -14,6 +14,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldLink;
+import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldLinks;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldNamespace;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
 import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldResource;
@@ -31,7 +33,6 @@ public class Client implements Serializable {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @JsonldId
     Integer id;
 
     @JsonldProperty("s:givenName")
@@ -51,6 +52,7 @@ public class Client implements Serializable {
     @JsonldProperty("s:birthDate")
     private Date birthDate;
 
+    @JsonldId
     @Email(message = "Email is not valid")
     @NotBlank(message = "Email is mandatory")
     private String email;
@@ -61,6 +63,10 @@ public class Client implements Serializable {
 
     @JsonldProperty("s:estimatedSalary")
     Double salary;
+
+
+    @JsonldProperty("")
+    String accountLink;
 
 
     public Client() {}

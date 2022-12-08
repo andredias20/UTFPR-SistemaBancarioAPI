@@ -13,6 +13,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
+import javax.websocket.server.PathParam;
 
 @RestController
 public class ClientResources {
@@ -60,12 +61,12 @@ public class ClientResources {
         return new ResponseEntity<>(mapper.writeValueAsString(client), HttpStatus.OK);
     }
 
-    @GetMapping(path = "/client", params = "name", produces = "application/json")
+    @GetMapping(path = "/client/{email}", produces = "application/json")
     @ResponseBody
-    public ResponseEntity<String> searchByName(@RequestParam(name = "name") String name) throws JsonProcessingException, RuntimeException {
+    public ResponseEntity<String> searchByEmail(@PathParam("email") String email) throws JsonProcessingException, RuntimeException {
         return new ResponseEntity<>(
             mapper.writeValueAsString(
-                mgr.searchByName(name)
+                mgr.searchByEmail(email)
                 ), HttpStatus.OK);
     }
 
