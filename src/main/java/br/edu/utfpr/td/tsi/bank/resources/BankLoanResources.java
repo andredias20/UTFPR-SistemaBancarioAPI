@@ -67,9 +67,9 @@ public class BankLoanResources {
         BankLoan loan = mgr.listById(id);
         return new ResponseEntity<>(mapper.writeValueAsString(loan), HttpStatus.OK);
     }
-    @GetMapping(path = "/bank/loan", params = "client_id")
-    public ResponseEntity<String> listByClientId(@RequestParam(name = "client_id") Integer id) throws JsonProcessingException {
-        List<BankLoan> loan = mgr.listLoansByClientId(id);
+    @GetMapping(path = "/bank/loan", params = "client_cpf")
+    public ResponseEntity<String> listByClientId(@RequestParam(name = "client_cpf") String cpf) throws JsonProcessingException {
+        List<BankLoan> loan = mgr.listLoansByClientId(cpf);
         return new ResponseEntity<>(mapper.writeValueAsString(loan), HttpStatus.OK);
     }
 }

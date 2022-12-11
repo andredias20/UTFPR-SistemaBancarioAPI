@@ -32,9 +32,9 @@ public class CreditCardManager implements CreditCardController {
 
     @Override
     public CreditCard create(CreditCard item) {
-        cliMgr.searchById(item.getClient_id().getId());
+        cliMgr.searchByCPF(item.getClient_id().getCpf());
         var credit = dao
-        		.existByClientId(new Client(item.getClient_id().getId()));
+        		.existByClientId(new Client(item.getClient_id().getCpf()));
         if(credit != null) {
         	throw new CreditCardCreationNotAllowed();
         }
@@ -57,9 +57,8 @@ public class CreditCardManager implements CreditCardController {
     }
 
 	@Override
-	public CreditCard listByClientId(Integer id){
-		var list = dao.findByClientId(new Client(id))
-				.orElseThrow(CreditCardNotFoundException::new);
-		return list;
+	public CreditCard listByClient(String cpf){
+		return dao.findByClientId(new Client(cpf))
+                .orElseThrow(CreditCardNotFoundException::new);
 	}
 }

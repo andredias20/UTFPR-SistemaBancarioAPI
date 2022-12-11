@@ -31,7 +31,7 @@ public class BankAccount implements Serializable {
 
     @JsonldProperty("s:clientID")
     @ManyToOne
-    @JoinColumn(name = "client_id", referencedColumnName = "id")
+    @JoinColumn(name = "client_cpf", referencedColumnName = "cpf")
     Client client;
 
     @JsonldProperty("s:accountAgency")

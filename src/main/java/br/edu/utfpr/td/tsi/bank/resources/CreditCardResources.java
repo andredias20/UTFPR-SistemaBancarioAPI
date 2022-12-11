@@ -49,8 +49,8 @@ public class CreditCardResources {
     }
     
     @GetMapping(path = "bank/credit-card", params = "client_id")
-    public ResponseEntity<String> listByClientId(@RequestParam(name = "client_id") Integer id) throws JsonProcessingException{
-    	CreditCard card = mgr.listByClientId(id);
+    public ResponseEntity<String> listByClientId(@RequestParam(name = "client_id") String id) throws JsonProcessingException{
+    	CreditCard card = mgr.listByClient(id);
     	return new ResponseEntity<>(mapper.writeValueAsString(card), HttpStatus.OK);
     }
 

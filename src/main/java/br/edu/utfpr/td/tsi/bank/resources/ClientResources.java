@@ -3,6 +3,7 @@ package br.edu.utfpr.td.tsi.bank.resources;
 import br.edu.utfpr.td.tsi.bank.modules.client.controller.ClientController;
 import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ioinformarics.oss.jackson.module.jsonld.JsonldModule;
@@ -30,29 +31,22 @@ public class ClientResources {
 
 
     @PostMapping(path = "/client", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<String> create(@Validated @RequestBody Client item) throws JsonProcessingException {
-            mgr.create(item);
-            return new ResponseEntity<>(mapper.writeValueAsString(item), HttpStatus.CREATED);
+    public ResponseEntity<String> create(@Validated @RequestBody @RequestAttribute(name = "cpf") Client item) throws JsonProcessingException {
+        System.out.println(item);
+        mgr.create(item);
+        return new ResponseEntity<>(mapper.writeValueAsString(item), HttpStatus.CREATED);
     }
 
-    @PutMapping(path = "/client", consumes = "application/json", produces = "application/json", params = "id")
-    public ResponseEntity<String> update(@RequestParam Integer id, @Validated @RequestBody Client item) throws JsonProcessingException {
-        item.setId(id);
+    @PutMapping(path = "/client", consumes = "application/json", produces = "application/json", params = "cpf")
+    public ResponseEntity<String> update(@RequestParam String cpf, @Validated @RequestBody Client item) throws JsonProcessingException {
+        item.setCpf(cpf);
         mgr.update(item);
         return new ResponseEntity<>(mapper.writeValueAsString(item), HttpStatus.ACCEPTED);
     }
-
-    @DeleteMapping(path = "/client", params = "id")
-    public ResponseEntity<String> delete(@RequestParam Integer id) {
-        mgr.delete(id);
-        return new ResponseEntity<>("Cliente: "+id+" Deleted", HttpStatus.ACCEPTED);
-    }
-
-
-    @GetMapping(path = "/client", params = "id", produces = "application/json")
-    public ResponseEntity<String> searchById(@RequestParam(name = "id") Integer id) throws JsonProcessingException {
-        Client client = mgr.searchById(id);
-        return new ResponseEntity<>(mapper.writeValueAsString(client), HttpStatus.OK);
+    @DeleteMapping(path = "/client", params = "cpf")
+    public ResponseEntity<String> delete(@RequestParam String cpf) {
+        mgr.delete(cpf);
+        return new ResponseEntity<>("Cliente: "+cpf+" Deleted", HttpStatus.ACCEPTED);
     }
 
     @GetMapping(path = "/client", params = "cpf", produces = "application/json")
@@ -61,9 +55,9 @@ public class ClientResources {
         return new ResponseEntity<>(mapper.writeValueAsString(client), HttpStatus.OK);
     }
 
-    @GetMapping(path = "/client/{email}", produces = "application/json")
+    @GetMapping(path = "/client", produces = "application/json", params = "email")
     @ResponseBody
-    public ResponseEntity<String> searchByEmail(@PathParam("email") String email) throws JsonProcessingException, RuntimeException {
+    public ResponseEntity<String> searchByEmail(@RequestParam String email) throws JsonProcessingException, RuntimeException {
         return new ResponseEntity<>(
             mapper.writeValueAsString(
                 mgr.searchByEmail(email)

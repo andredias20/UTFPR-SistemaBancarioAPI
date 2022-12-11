@@ -20,36 +20,30 @@ public class ClientManager implements ClientController {
 
     @Override
     public Client create(Client item) {
-        if (dao.searchClientByCpfEquals(item.getCpf()) != null) throw new ClientCPFCannotBeCreated();
+        if (dao.findById(item.getCpf()).isPresent())
+            throw new ClientCPFCannotBeCreated();
+
         if (item.getSalary() > 1200D) {
-            item.setId(dao.save(item).getId());
+            dao.save(item);
         } else throw new ClientSalaryNotApplicable();
         return item;
     }
 
     @Override
     public void update(Client item) {
-        dao.findById(item.getId()).orElseThrow(ClientNotFoundException::new);
+        dao.findById(item.getCpf()).orElseThrow(ClientNotFoundException::new);
         dao.save(item);
     }
 
     @Override
-    public void delete(Integer id){
+    public void delete(String id){
         dao.findById(id).orElseThrow(ClientNotFoundException::new);
         dao.deleteById(id);
     }
 
     @Override
-    public Client searchById(Integer id) {
-        if(id == null) throw new ClientCantBeNull();
-        return dao.findById(id).orElseThrow(ClientNotFoundException::new);
-    }
-
-    @Override
     public Client searchByCPF(String cpf) {
-        Client client = dao.searchClientByCpfEquals(cpf);
-        if (client == null) throw new ClientNotFoundException();
-        return client;
+        return dao.findById(cpf).orElseThrow(ClientNotFoundException::new);
     }
 
     @Override

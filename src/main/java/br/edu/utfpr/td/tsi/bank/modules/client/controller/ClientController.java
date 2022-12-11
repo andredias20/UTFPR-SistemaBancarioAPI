@@ -8,8 +8,7 @@ public interface ClientController {
 
     Client create(Client item) throws RuntimeException;
     void update(Client item) throws RuntimeException;
-    void delete(Integer id) throws RuntimeException;
-    Client searchById(Integer id) throws RuntimeException;
+    void delete(String cpf) throws RuntimeException;
     Client searchByCPF(String cpf) throws RuntimeException;
     List<Client> searchByEmail(String email) throws RuntimeException;
     List<Client> searchAll();

@@ -7,6 +7,7 @@ import br.edu.utfpr.td.tsi.bank.modules.account.dao.BankAccountDAO;
 import br.edu.utfpr.td.tsi.bank.modules.account.exceptions.BankAccountNotAllowedException;
 import br.edu.utfpr.td.tsi.bank.modules.account.exceptions.BankAccountNotFoundException;
 import br.edu.utfpr.td.tsi.bank.modules.account.model.Transaction;
+import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -27,12 +28,9 @@ public class BankAccountManager implements BankAccountController {
 
 	@Override
     public BankAccount openAccount(BankAccount item) {
-
-        var clientID = item.getClient();
-        clientManager.searchById(clientID.getId());
-
+        Client clientID = item.getClient();
+        clientManager.searchByCPF(clientID.getCpf());
         BankAccount exists = dao.existsByAccountNumber(item.getAgency(), item.getAccountNumber());
-
         if(exists != null) throw new BankAccountNotAllowedException();
         item.setActive(true);
         return dao.save(item);

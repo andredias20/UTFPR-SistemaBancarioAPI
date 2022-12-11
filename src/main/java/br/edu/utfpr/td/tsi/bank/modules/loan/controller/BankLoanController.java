@@ -10,5 +10,5 @@ public interface BankLoanController {
     void delete(Integer id);
     List<BankLoan> listAll();
     BankLoan listById(Integer id);
-    List<BankLoan> listLoansByClientId(Integer client_id);
+    List<BankLoan> listLoansByClientId(String client_id);
 }

@@ -40,8 +40,7 @@ public class Transaction implements Serializable {
     @JoinColumn(name = "account_id", referencedColumnName = "id")
     @JsonldProperty("s:accountID")
     private BankAccount account;
-    
-    
+
     @NotBlank(message = "Data from Destination account is needed (CPF is empty)")
     @CPF
     @JsonldProperty("s:otherCPF")

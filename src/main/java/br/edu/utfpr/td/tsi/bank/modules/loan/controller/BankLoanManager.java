@@ -24,7 +24,7 @@ public class BankLoanManager implements BankLoanController {
 	@Override
     public BankLoan create(BankLoan item) {
         if(item == null) throw new BankLoanIllegalArgumentsException();
-        Client client = clientManager.searchById(item.getClient().getId());
+        Client client = clientManager.searchByCPF(item.getClient().getCpf());
         if(client.getSalary() >= 28008.00)
 				return dao.save(item);
         else
@@ -56,8 +56,8 @@ public class BankLoanManager implements BankLoanController {
     }
 
     @Override
-    public List<BankLoan> listLoansByClientId(Integer client_id) {
-        clientManager.searchById(client_id);
+    public List<BankLoan> listLoansByClientId(String client_id) {
+        clientManager.searchByCPF(client_id);
         return dao.findAllByClientId(new Client(client_id));
     }
 }

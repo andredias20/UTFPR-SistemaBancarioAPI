@@ -38,8 +38,8 @@ public class CreditCard implements Serializable {
     
     @JsonldProperty("s:clientID")
     @OneToOne
-	@NotNull(message = "client_id is mandatory")
-    @JoinColumn(name = "client_id", referencedColumnName = "id")
+	@NotNull(message = "client_cpf is mandatory")
+    @JoinColumn(name = "client_cpf", referencedColumnName = "cpf")
     private Client client_id;
     
     @JsonldProperty("s:cardHolder")

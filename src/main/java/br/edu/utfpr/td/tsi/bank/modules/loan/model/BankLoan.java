@@ -33,7 +33,7 @@ public class BankLoan implements Serializable {
 
     @JsonldProperty("s:clientID")
     @ManyToOne
-    @JoinColumn(name = "client_id", referencedColumnName = "id")
+    @JoinColumn(name = "client_cpf", referencedColumnName = "cpf")
     private Client client;
 
     @JsonldProperty("s:loanValue")

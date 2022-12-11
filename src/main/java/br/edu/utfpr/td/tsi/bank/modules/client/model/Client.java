@@ -1,61 +1,49 @@
 package br.edu.utfpr.td.tsi.bank.modules.client.model;
 
-import java.io.Serializable;
-import java.util.Date;
+import ioinformarics.oss.jackson.module.jsonld.annotation.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-
-import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldId;
-import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldLink;
-import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldLinks;
-import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldNamespace;
-import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldProperty;
-import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldResource;
-import ioinformarics.oss.jackson.module.jsonld.annotation.JsonldType;
+import javax.validation.constraints.NotEmpty;
+import java.io.Serializable;
+import java.util.Date;
 
 @JsonldResource
 @JsonldNamespace(name = "s", uri = "http://schema.org/")
 @JsonldType("s:Person")
 @Entity
-@Table(name = "client")
 public class Client implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+    @Id
+    @JsonldId
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    int id;
 
-	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    Integer id;
 
-    @JsonldProperty("s:givenName")
+    @Column(name = "cpf", nullable = false)
+    //@JsonldProperty("@id")
+    String cpf;
+
+
     @Column(length = 70)
     @NotBlank(message = "Name is mandatory")
+    @JsonldProperty("s:givenName")
     String first_name;
  
-    @JsonldProperty("s:familyName")
-    @Column(length = 100)
-    private String last_name;
 
-    @JsonldProperty("s:identifier")
-    @Column(unique = true)
-    @Pattern(regexp = "\\d{3}.\\d{3}.\\d{3}-\\d{2}", message = "Value don't correspond to default value ###.###.###-##, where # is digits 0-9.")
-    private String cpf;
+    @Column(length = 100)
+    @JsonldProperty("s:familyName")
+    String last_name;
 
     @JsonldProperty("s:birthDate")
-    private Date birthDate;
+    Date birthDate;
 
-    @JsonldId
     @Email(message = "Email is not valid")
-    @NotBlank(message = "Email is mandatory")
-    private String email;
+    @NotEmpty(message = "Email is mandatory")
+    String email;
 
     @JsonldProperty("s:telephone")
     @NotBlank(message = "Phone is mandatory")
@@ -65,39 +53,28 @@ public class Client implements Serializable {
     Double salary;
 
 
-    @JsonldProperty("")
-    String accountLink;
+    //@JsonldProperty("")
+    //String accountLink;
 
 
     public Client() {}
 
-    public Client(Integer id){
-        this.id = id;
+    public Client(String cpf){
+        this.cpf = cpf;
     }
 
-    public Integer getId() {
+
+    /*
+    public Client(int id){
+        this.id = id;
+    }*/
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
-    }
-
-    public String getFirst_name() {
-        return first_name;
-    }
-
-    public void setFirst_Name(String name) {
-        this.first_name = first_name;
-    }
-
-
-    public String getLast_Name() {
-        return last_name;
-    }
-
-    public void setLast_Name(String name) {
-        this.last_name = last_name;
     }
 
     public String getCpf() {
@@ -106,6 +83,22 @@ public class Client implements Serializable {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String getFirst_name() {
+        return first_name;
+    }
+
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+
+    public String getLast_name() {
+        return last_name;
+    }
+
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public Date getBirthDate() {
@@ -138,5 +131,18 @@ public class Client implements Serializable {
 
     public void setSalary(Double salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "cpf='" + cpf + '\'' +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                ", birthDate=" + birthDate +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }
