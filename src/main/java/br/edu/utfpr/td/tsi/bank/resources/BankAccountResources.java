@@ -10,12 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -56,6 +51,12 @@ public class BankAccountResources {
     
     @GetMapping(path = "/bank/account", params = "id")
     public ResponseEntity<String> listById(@RequestParam Integer id) throws JsonProcessingException {
+        BankAccount account = mgr.listById(id);
+        return new ResponseEntity<>(mapper.writeValueAsString(account), HttpStatus.OK);
+    }
+
+    @GetMapping(path = "/bank/account/{id}")
+    public ResponseEntity<String> listByIdPath(@PathVariable int id) throws JsonProcessingException {
         BankAccount account = mgr.listById(id);
         return new ResponseEntity<>(mapper.writeValueAsString(account), HttpStatus.OK);
     }

@@ -10,6 +10,7 @@ public interface ClientController {
     void update(Client item) throws RuntimeException;
     void delete(String cpf) throws RuntimeException;
     Client searchByCPF(String cpf) throws RuntimeException;
+    Client findById(int id)throws RuntimeException;
     List<Client> searchByEmail(String email) throws RuntimeException;
     List<Client> searchAll();
 

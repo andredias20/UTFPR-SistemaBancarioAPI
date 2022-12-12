@@ -8,13 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -44,6 +38,12 @@ public class CreditCardResources {
 
     @GetMapping(value = "/bank/credit-card", params = "id")
     public ResponseEntity<String> listById(@RequestParam Integer id) throws JsonProcessingException {
+        CreditCard card = mgr.listById(id);
+        return new ResponseEntity<>(mapper.writeValueAsString(card), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/bank/credit-card/{id}")
+    public ResponseEntity<String> listByIdPath(@PathVariable int id) throws JsonProcessingException {
         CreditCard card = mgr.listById(id);
         return new ResponseEntity<>(mapper.writeValueAsString(card), HttpStatus.OK);
     }

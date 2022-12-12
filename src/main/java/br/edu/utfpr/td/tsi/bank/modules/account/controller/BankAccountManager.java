@@ -29,11 +29,17 @@ public class BankAccountManager implements BankAccountController {
 	@Override
     public BankAccount openAccount(BankAccount item) {
         Client clientID = item.getClient();
-        clientManager.searchByCPF(clientID.getCpf());
-        BankAccount exists = dao.existsByAccountNumber(item.getAgency(), item.getAccountNumber());
-        if(exists != null) throw new BankAccountNotAllowedException();
+        var client = clientManager.searchByCPF(clientID.getCpf());
+        if(dao.existsByAccountNumber(item.getAgency(), item.getAccountNumber()).isPresent()) throw new BankAccountNotAllowedException();
         item.setActive(true);
-        return dao.save(item);
+        var finalItem = dao.save(item);
+        updateClient(client, finalItem.getId());
+        return finalItem;
+    }
+
+    private void updateClient(Client item, int accountId) {
+        item.setOwnAccountId(accountId);
+        clientManager.update(item);
     }
 
     @Override

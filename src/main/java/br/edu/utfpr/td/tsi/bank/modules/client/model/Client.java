@@ -13,6 +13,10 @@ import java.util.Date;
 @JsonldNamespace(name = "s", uri = "http://schema.org/")
 @JsonldType("s:Person")
 @Entity
+@JsonldLinks(
+        @JsonldLink(rel = "s:owns", name = "ownCreditCardId", href = "http://localhost:8080/bank/credit-card/{ownCreditCardId}"),
+        @JsonldLink(rel = "s:owns", name = "ownAccountId", href = "http://localhost:8080/bank/account/{ownAccountId}")
+)
 public class Client implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -22,9 +26,8 @@ public class Client implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     int id;
 
-
     @Column(name = "cpf", nullable = false)
-    //@JsonldProperty("@id")
+    @JsonldProperty("s:identifier")
     String cpf;
 
 
@@ -52,9 +55,11 @@ public class Client implements Serializable {
     @JsonldProperty("s:estimatedSalary")
     Double salary;
 
+    @Column(unique = true)
+    Integer ownAccountId;
 
-    //@JsonldProperty("")
-    //String accountLink;
+    @Column(unique = true)
+    Integer ownCreditCardId;
 
 
     public Client() {}
@@ -63,11 +68,9 @@ public class Client implements Serializable {
         this.cpf = cpf;
     }
 
-
-    /*
     public Client(int id){
         this.id = id;
-    }*/
+    }
 
     public int getId() {
         return id;
@@ -133,10 +136,27 @@ public class Client implements Serializable {
         this.salary = salary;
     }
 
+    public Integer getOwnAccountId() {
+        return ownAccountId;
+    }
+
+    public void setOwnAccountId(Integer idAccount) {
+        this.ownAccountId = idAccount;
+    }
+
+    public Integer getOwnCreditCardId() {
+        return ownCreditCardId;
+    }
+
+    public void setOwnCreditCardId(Integer idCreditCard) {
+        this.ownCreditCardId = idCreditCard;
+    }
+
     @Override
     public String toString() {
         return "Client{" +
-                "cpf='" + cpf + '\'' +
+                "id=" + id +
+                ", cpf='" + cpf + '\'' +
                 ", first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", birthDate=" + birthDate +

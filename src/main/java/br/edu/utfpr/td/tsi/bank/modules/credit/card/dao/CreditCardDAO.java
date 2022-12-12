@@ -20,7 +20,7 @@ public interface CreditCardDAO extends CrudRepository<CreditCard, Integer> {
 	Optional<CreditCard> findByClientId(Client client);
 	
 	@Query(value = "SELECT a FROM CreditCard a WHERE a.client_id = ?1")
-	CreditCard existByClientId(Client client);
+	Optional<CreditCard> existByClientId(Client client);
 
 
 
