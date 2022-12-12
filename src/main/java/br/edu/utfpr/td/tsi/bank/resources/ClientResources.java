@@ -31,8 +31,7 @@ public class ClientResources {
 
 
     @PostMapping(path = "/client", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<String> create(@Validated @RequestBody @RequestAttribute(name = "cpf") Client item) throws JsonProcessingException {
-        System.out.println(item);
+    public ResponseEntity<String> create(@Validated @RequestBody Client item) throws JsonProcessingException {
         mgr.create(item);
         return new ResponseEntity<>(mapper.writeValueAsString(item), HttpStatus.CREATED);
     }
@@ -53,6 +52,12 @@ public class ClientResources {
     public ResponseEntity<String> searchByCPF(@RequestParam("cpf") String cpf) throws JsonProcessingException {
         Client client = mgr.searchByCPF(cpf);
         return new ResponseEntity<>(mapper.writeValueAsString(client), HttpStatus.OK);
+    }
+
+    @GetMapping(path = "/client/{id}", produces = "application/json")
+    @ResponseBody
+    public ResponseEntity<String> searchInPath(@PathVariable Integer id) throws JsonProcessingException {
+        return new ResponseEntity<>(mapper.writeValueAsString(mgr.findById(id)), HttpStatus.OK);
     }
 
     @GetMapping(path = "/client", produces = "application/json", params = "email")

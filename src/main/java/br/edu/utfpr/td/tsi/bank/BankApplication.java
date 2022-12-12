@@ -2,6 +2,7 @@ package br.edu.utfpr.td.tsi.bank;
 
 import java.util.TimeZone;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;

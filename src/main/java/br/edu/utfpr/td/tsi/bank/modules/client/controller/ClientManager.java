@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import br.edu.utfpr.td.tsi.bank.modules.client.dao.ClientDAO;
 import br.edu.utfpr.td.tsi.bank.modules.client.exception.ClientCPFCannotBeCreated;
-import br.edu.utfpr.td.tsi.bank.modules.client.exception.ClientCantBeNull;
 import br.edu.utfpr.td.tsi.bank.modules.client.exception.ClientNotFoundException;
 import br.edu.utfpr.td.tsi.bank.modules.client.exception.ClientSalaryNotApplicable;
 import br.edu.utfpr.td.tsi.bank.modules.client.model.Client;
@@ -20,8 +19,10 @@ public class ClientManager implements ClientController {
 
     @Override
     public Client create(Client item) {
-        if (dao.findById(item.getCpf()).isPresent())
+        System.out.println();
+        if (dao.findByCpf(item.getCpf()).isPresent()) //If the search finds a Client with the same CPF, it doesnt allow to create another
             throw new ClientCPFCannotBeCreated();
+
 
         if (item.getSalary() > 1200D) {
             dao.save(item);
@@ -31,30 +32,38 @@ public class ClientManager implements ClientController {
 
     @Override
     public void update(Client item) {
-        dao.findById(item.getCpf()).orElseThrow(ClientNotFoundException::new);
+        dao.findByCpf(item.getCpf())
+                .orElseThrow(ClientNotFoundException::new);
         dao.save(item);
     }
 
     @Override
     public void delete(String id){
-        dao.findById(id).orElseThrow(ClientNotFoundException::new);
+        dao.findByCpf(id)
+                .orElseThrow(ClientNotFoundException::new);
         dao.deleteById(id);
     }
 
     @Override
     public Client searchByCPF(String cpf) {
-        return dao.findById(cpf).orElseThrow(ClientNotFoundException::new);
+        return dao.findByCpf(cpf)
+                .orElseThrow(ClientNotFoundException::new);
     }
 
     @Override
     public List<Client> searchByEmail(String email){
-        List<Client> client = dao.searchClientsByEmail(email);
-        if (client == null) throw new ClientNotFoundException();
-        return client;
+        return dao.searchClientsByEmail(email)
+                .orElseThrow(ClientNotFoundException::new);
+    }
+
+    @Override
+    public Client findById(int id) throws RuntimeException {
+        return dao.findById(id).orElseThrow(ClientNotFoundException::new);
     }
 
     @Override
     public List<Client> searchAll() {
         return dao.searchAll();
     }
+
 }

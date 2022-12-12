@@ -32,14 +32,19 @@ public class CreditCardManager implements CreditCardController {
 
     @Override
     public CreditCard create(CreditCard item) {
-        cliMgr.searchByCPF(item.getClient_id().getCpf());
-        var credit = dao
-        		.existByClientId(new Client(item.getClient_id().getCpf()));
-        if(credit != null) {
+        String cpf = item.getClient_id().getCpf();
+        var cli = cliMgr.searchByCPF(cpf);
+        if(dao.existByClientId(cli).isPresent())
         	throw new CreditCardCreationNotAllowed();
-        }
-    	return dao.save(item);
+        item = dao.save(item);
+        updateClient(item.getId(),cli);
+    	return item;
     }
+
+    private void updateClient(int creditCardId, Client item){
+
+    }
+
 
     @Override
     public void delete(Integer id) {

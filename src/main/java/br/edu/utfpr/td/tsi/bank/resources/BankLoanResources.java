@@ -3,18 +3,13 @@ package br.edu.utfpr.td.tsi.bank.resources;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -64,6 +59,11 @@ public class BankLoanResources {
 
     @GetMapping(path = "/bank/loan", params = "id")
     public ResponseEntity<String> listById(@RequestParam(name = "id") Integer id) throws JsonProcessingException {
+        BankLoan loan = mgr.listById(id);
+        return new ResponseEntity<>(mapper.writeValueAsString(loan), HttpStatus.OK);
+    }
+    @GetMapping(path = "/bank/loan/{id}")
+    public ResponseEntity<String> listByIdPath(@PathVariable int id) throws JsonProcessingException {
         BankLoan loan = mgr.listById(id);
         return new ResponseEntity<>(mapper.writeValueAsString(loan), HttpStatus.OK);
     }
